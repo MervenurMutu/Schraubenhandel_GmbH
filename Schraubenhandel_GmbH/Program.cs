@@ -8,11 +8,17 @@ namespace Schraubenhandel_GmbH
 {
     class Program
     {
+<<<<<<< Updated upstream
         static void Main(string[] args)//jujiklj
+=======
+
+        static void Main(string[] args)
+
+>>>>>>> Stashed changes
         {
             //HAUPTPROGRAMM
             {
-                Console.WriteLine("(1) Schraubeneinkauf: Hier können Sie Ihre eigene Schraube entwerfen und anschließend bei unserem Webshop Partner direkt bestellen\n(2) Schraubenberechnung: Hier berechnen wir für Sie alle wichtigen Daten für Schrauben mit Ihren Angaben");
+                Console.WriteLine("Sehr geehrter Kunde\nVielen Dank, dass Sie sich für uns entschieden haben\nWir bieten Ihnen folgendes an:\n(1) Schraubeneinkauf: Hier können Sie Ihre eigene Schraube entwerfen und anschließend bei unserem Webshop Partner direkt bestellen\n(2) Schraubenberechnung: Hier berechnen wir für Sie alle wichtigen Daten für Schrauben mit Ihren Angaben");
 
 
 
@@ -24,9 +30,7 @@ namespace Schraubenhandel_GmbH
                     Console.WriteLine("Was möchten Sie berechnen?\n(1) Masse\n(2) Preis");
                     int zweiteAuswahl = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("\nBitte geben Sie die geforderten Daten in mm an.\n");
-                    Console.WriteLine("Infos zum SchraubenKopf");
-                    Console.WriteLine("Vierkant (1)\nSechskant (2)\nInnensechskannt (3)");
+                    Console.WriteLine("\nBitte geben Sie die geforderten Daten in mm an.\nInfos zum SchraubenKopf\n(1) Vierkant\n(2) Sechskant\n(3) Innensechskannt");
 
                     int eingabe = Convert.ToInt32(Console.ReadLine());
                     Volumen1 Kopf = new Volumen1();
@@ -128,10 +132,7 @@ namespace Schraubenhandel_GmbH
 
                 if (ersteAuswahl == 1)                                                                                          //Schraubenkopf
                 {
-                    Console.WriteLine("Für Ihre individuelle Schraubenanpassung sind einige Eingabedaten erforderlich.");
-                    Console.WriteLine("\nBitte geben Sie die geforderten Daten in mm an.\n.");
-                    Console.WriteLine("Infos zum SchraubenKopf");
-                    Console.WriteLine("Vierkant (1)\nSechskant (2)\nInnensechskannt (3)");
+                    Console.WriteLine("Für Ihre individuelle Schraubenanpassung sind einige Eingabedaten erforderlich.\nBitte geben Sie die geforderten Daten in mm an.\nInfos zum SchraubenKopf\n(1)Vierkant\n(2) Sechskant\n(3) Innensechskannt");
 
 
                     int eingabe2 = Convert.ToInt32(Console.ReadLine());
