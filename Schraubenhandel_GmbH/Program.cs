@@ -81,12 +81,12 @@ namespace Schraubenhandel_GmbH
                     double gesamtvolumen = volumenSchaft + Kopf.Volumenx;
 
                     double[] dichte = new double[8];  //Dichten in g/cm^3
-                    dichte[0] = 7.85;     //Stahl
-                    dichte[1] = 7.8;    //Edelstahl
-                    dichte[2] = 8.4;     //Messing
-                    dichte[3] = 2.7;     //Aluminiuim
+                    dichte[0] = 7.85;     //Baustahl S235JR
+                    dichte[1] = 8;    //Vergütungsstahl 34CrNiMo6
+                    dichte[2] = 8.44;     //Messing CuZn37
+                    dichte[3] = 2.7;     //Aluminiuimlegierung ENAW-AlSi1MgMn
 
-                    Console.WriteLine("Bitte Werkstoff angeben:\n(1) Stahl\n(2) Edelstahl\n(3) Messing\n(4) Aluminium");
+                    Console.WriteLine("Bitte Werkstoff angeben:\n(1) Baustahl S235JR\n(2) Vergütungsstahl 34CrNiMo6\n(3) Messing CuZn37\n(4) Aluminiumlegierung ENAW-AlSi1MgMn");
                     int xi;
 
                     xi = Convert.ToInt32(Console.ReadLine());
@@ -98,10 +98,10 @@ namespace Schraubenhandel_GmbH
                     masse = (gesamtvolumen / 1000) * dichteEnd;
 
                     double[] Preis = new double[8];  //Preise in $/kg
-                    Preis[0] = 1.50;   //Stahl
-                    Preis[1] = 8.21;    //Edelstahl 
-                    Preis[2] = 3.50;   //Messing
-                    Preis[4] = 2.00;   //Aluminium
+                    Preis[0] = 3.63;   //Baustahl S235JR
+                    Preis[1] = 10.28;    //Vergütungsstahl 34CrNiMo6
+                    Preis[2] = 7.13;   //Messing CuZn37
+                    Preis[4] = 9.89;   //Aluminiumlegierung ENAW-AlSi1MgMn
 
                     double preisEnd = Preis[y];
 
@@ -255,7 +255,7 @@ namespace Schraubenhandel_GmbH
         }
 
         //METHODEN
-        static double Schaft() //Methode: Schruabenschaft/Gewinde
+        static double Schaft() //Methode: Schraubenschaft/Gewinde
         {
             double schaftLänge;
             double durchmesser;
