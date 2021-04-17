@@ -126,7 +126,7 @@ namespace Schraubenhandel_GmbH
 
                 //Schraubenerstellung
 
-                if (ersteAuswahl == 1)                                                                                          //Schraubenkopf
+                if (ersteAuswahl == 1) //Schraubenkopf
                 {
                     Console.WriteLine("Für Ihre individuelle Schraubenanpassung sind einige Eingabedaten erforderlich.\nBitte geben Sie die geforderten Daten in mm an.\nInfos zum SchraubenKopf\n(1)Vierkant\n(2) Sechskant\n(3) Innensechskannt");
 
