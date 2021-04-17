@@ -8,7 +8,11 @@ namespace Schraubenhandel_GmbH
 {
     class Program
     {
+<<<<<<< Updated upstream
         static void Main(string[] args)//jujiklj
+=======
+        static void Main(string[] args)// hiiiii
+>>>>>>> Stashed changes
         {
             //HAUPTPROGRAMM
             {
