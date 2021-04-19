@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -82,33 +82,39 @@ namespace Schraubenhandel_GmbH
                                 double volumenSchaft = Schaft();  //Methodenaufruf Methode "Schaft" zur Volumenberechnung des Schafts
 
 
+
+
+                    Console.WriteLine("Bitte Werkstoff angeben:\n(1) Baustahl S235JR\n(2) Vergütungsstahl 34CrNiMo6\n(3) Messing CuZn37\n(4) Aluminiumlegierung ENAW-AlSi1MgMn");
+                    int xi;
+
                                 double gesamtvolumen = volumenSchaft + Kopf.Volumenx;
 
-                                List<double> dichte = new List<double>();   //Dichten in g/cm^3                                //Preise und Dichten nun doch lieber als Listen, da Benutzerfreundlicher beim Hinzufügen
-                                dichte.Add(7.85);      //Stahl
-                                dichte.Add(7.8);       //Edelstahl
-                                dichte.Add(8.4);      //Messing
-                                dichte.Add(2.7);      //Aluminium
+                    double[] dichte = new double[8];  //Dichten in g/cm^3
+                    dichte[0] = 7.85;     //Baustahl S235JR
+                    dichte[1] = 8;    //Vergütungsstahl 34CrNiMo6
+                    dichte[2] = 8.44;     //Messing CuZn37
+                    dichte[3] = 2.7;     //Aluminiuimlegierung ENAW-AlSi1MgMn
 
 
-                                Console.WriteLine("Bitte Werkstoff angeben:\n(1) Stahl\n(2) Edelstahl\n(3) Messing\n(4) Aluminium");
-                                int xi;
+
+
 
                                 xi = Convert.ToInt32(Console.ReadLine());
                                 int y = xi - 1;
 
+
                                 double dichteEnd = dichte[y];
+
 
                                 double masse;
                                 masse = (gesamtvolumen / 1000) * dichteEnd;
 
 
-                                List<double> Preis = new List<double>();  //Preise in $/kg
-                                Preis.Add(1.50);      //Stahl
-                                Preis.Add(8.21);       //Edelstahl
-                                Preis.Add(3.50);      //Messing
-                                Preis.Add(2.00);      //Aluminium
-
+                    double[] Preis = new double[8];  //Preise in $/kg
+                    Preis[0] = 3.63;   //Baustahl S235JR
+                    Preis[1] = 10.28;    //Vergütungsstahl 34CrNiMo6
+                    Preis[2] = 7.13;   //Messing CuZn37
+                    Preis[4] = 9.89;   //Aluminiumlegierung ENAW-AlSi1MgMn
 
                                 double preisEnd = Preis[y];
 
@@ -318,7 +324,10 @@ namespace Schraubenhandel_GmbH
         }
 
         //METHODEN
+
+
         static double Schaft()  //METHODE: Berechnung des Volumens des Schraubenschafts
+
         {
             double schaftLänge;
             double durchmesser;
