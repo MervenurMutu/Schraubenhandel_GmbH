@@ -149,36 +149,45 @@ namespace Schraubenhandel_GmbH
 
                         if (ersteAuswahl == 1)                                                                                          //Schraubenkopf
                         {
-                            Console.WriteLine("Für Ihre individuelle Schraubenanpassung sind einige Eingabedaten erforderlich.\nBitte geben Sie die geforderten Daten in mm an.\nInfos zum SchraubenKopf\n(1)Vierkant\n(2) Sechskant\n(3) Innensechskannt\n\n0 für Hauptmenü\n");
-
-
-                            int eingabe2 = Convert.ToInt32(Console.ReadLine());
-                            if (eingabe2 == 0)
+                            Nachfrage Nachfrag = new Nachfrage();
+                            do
                             {
-                                goto Hauptmenü;
+                                Console.WriteLine("Für Ihre individuelle Schraubenanpassung sind einige Eingabedaten erforderlich.\nBitte geben Sie die geforderten Daten in mm an.\nInfos zum SchraubenKopf\n(1)Vierkant\n(2) Sechskant\n(3) Innensechskannt\n\n0 für Hauptmenü\n");
+
+
+                                int eingabe2 = Convert.ToInt32(Console.ReadLine());
+                                if (eingabe2 == 0)
+                                {
+                                    goto Hauptmenü;
+                                }
+
+                                if (eingabe2 == 1)
+                                {
+
+                                    double KopfErstellung1 = Methode1(ersteAuswahl);
+
+                                }
+                                if (eingabe2 == 2)
+                                {
+
+                                    double KopfErstellung2 = Methode2(ersteAuswahl);
+
+                                }
+                                if (eingabe2 == 3)
+                                {
+
+                                    double KopfErstellung = Methode2(ersteAuswahl);
+
+                                }
+                                Console.WriteLine("Nun zum Schaft");
+                                double schaft2 = Schaft();
+
+                                Console.WriteLine("Sind alle Eingaben korrekt ?\n(9) für Wiederholung");
+                                Nachfrag.richtig = Convert.ToInt32(Console.ReadLine());
                             }
+                            while (Nachfrag.richtig == 9);
 
-                            if (eingabe2 == 1)
-                            {
-
-                                double KopfErstellung1 = Methode1(ersteAuswahl);
-
-                            }
-                            if (eingabe2 == 2)
-                            {
-
-                                double KopfErstellung2 = Methode2(ersteAuswahl);
-
-                            }
-                            if (eingabe2 == 3)
-                            {
-
-                                double KopfErstellung = Methode2(ersteAuswahl);
-
-                            }
-                            Console.WriteLine("Nun zum Schaft");
-                            double schaft2 = Schaft();
-
+                            Console.WriteLine("Vielen Dank");
                             //Schraubenschaft/Gewinde
                         }
 
@@ -222,6 +231,10 @@ namespace Schraubenhandel_GmbH
         //KLASSEN UND METHODEN 
 
         //KLASSEN
+        class Nachfrage
+        {
+            public int richtig { get; set; }
+        }
 
         class Schraubenkopf //Klasse Schraubenkopf MAIN KLASSE
         {
@@ -255,7 +268,7 @@ namespace Schraubenhandel_GmbH
             public double VolumenSechskant { get; set; }
 
             private double Wurzel3 = Math.Sqrt(3);
-            public string ProgrammSechs { get; set; }
+            public int ProgrammSechs { get; set; }
             private double FlächeninhaltSechseck;
             public double Volumen2()                 //Schlüsselweite STATT Seitenlänge (fr keiner beschreibt einen Sechskantkopf mit einer Seitenlänge des Sechsecks xD)
             {
@@ -264,9 +277,9 @@ namespace Schraubenhandel_GmbH
                 VolumenSechskant = FlächeninhaltSechseck * Höhe;
                 return VolumenSechskant;
             }
-            public string ProgrammSechskannt()
+            public int ProgrammSechskannt()
             {
-                ProgrammSechs = "Hier könnte ein Programm stehen";
+                ProgrammSechs = 67893;
                 return ProgrammSechs;
 
 
@@ -278,7 +291,7 @@ namespace Schraubenhandel_GmbH
             public double kreisDurchmesser { get; set; }
             public double innenHöhe { get; set; }
             public double VolumenInnensechskant { get; set; }
-            public string ProgrammInnen { get; set; }
+            public int ProgrammInnen { get; set; }
             public double Schlüsselweiten { get; set; }
 
             private double Wurzeln3 = Math.Sqrt(3);
@@ -297,9 +310,9 @@ namespace Schraubenhandel_GmbH
 
                 return VolumenInnensechskant;
             }
-            public string ProgrammInnensechskannt()
+            public int ProgrammInnensechskannt()
             {
-                ProgrammInnen = "Hier könnte ein Programm stehen";
+                ProgrammInnen = 784392; //Platzhalter
                 return ProgrammInnen;
             }
         }
