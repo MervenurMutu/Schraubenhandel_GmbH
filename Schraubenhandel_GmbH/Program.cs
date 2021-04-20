@@ -181,62 +181,59 @@ namespace Schraubenhandel_GmbH
 
                 //NORMTEILE (3)
 
-                case 1.1: // Sechskantschraube DIN EN ISO 4014
+                case 1.1: // Sechskantschraube DIN EN ISO 4017 (durchgängiges Gewinde) / DIN EN ISO 4014 (mit Schaft)
 
-                    double[,] Normtabelle = new double[10, 5];
+                    double[,] Normtabelle = new double[11, 5];
                       
 
-                    //Bezeichnung                   // Kopfgröße                //Kerndurchmesser               //Schlüsselweite           //Kopfhöhe
-                    Normtabelle[0, 0] = 4;          Normtabelle[0, 1] = 7.7;    Normtabelle[0, 2] = 3.40;       Normtabelle[0, 3] = 7;      Normtabelle[0, 4] = 2.8;
-                    Normtabelle[1, 0] = 6;          Normtabelle[1, 1] = 11.1;   Normtabelle[1, 2] = 5.07;       Normtabelle[1, 3] = 10;     Normtabelle[1, 4] = 4;
-                    Normtabelle[2, 0] = 8;          Normtabelle[2, 1] = 14.4;   Normtabelle[2, 2] = 6.82;       Normtabelle[2, 3] = 13;     Normtabelle[2, 4] = 5.3;
-                    Normtabelle[3, 0] = 10;         Normtabelle[4, 1] = 17,8;   Normtabelle[3, 2] = 8.56;       Normtabelle[3, 3] = 17;     Normtabelle[3, 4] = 6.4;
-                    Normtabelle[4, 0] = 12;         Normtabelle[5, 1] = 20;     Normtabelle[4, 2] = 10.32;      Normtabelle[4, 3] = 19;     Normtabelle[4, 4] = 7.5;
-                    Normtabelle[5, 0] = 14;         Normtabelle[6, 1] = 24,5,   Normtabelle[5, 2] = 12.07;      Normtabelle[5, 3] = 21;     Normtabelle[5, 4] = 8.8;
-                    Normtabelle[6, 0] = 16;         Normtabelle[7, 1] = 26,2;   Normtabelle[6, 2] = 14.08;      Normtabelle[6, 3] = 24;     Normtabelle[6, 4] = 10;
-                    Normtabelle[7, 0] = 18;         Normtabelle[8, 1] = ;       Normtabelle[7, 2] = 15.57;      Normtabelle[7, 3] = ;       Normtabelle[7, 4] = ;
-                    Normtabelle[8, 0] = 20;         Normtabelle[9, 1] = 33;     Normtabelle[8, 2] = 17.57;      Normtabelle[8, 3] = 30;     Normtabelle[8, 4] = 12.5;
-                    Normtabelle[9, 0] = 22;         Normtabelle[10, 1] = ;      Normtabelle[9, 2] = 19.57;      Normtabelle[9, 3] = ;       Normtabelle[9, 4] = ;
-                    Normtabelle[10, 0] = 24;        Normtabelle[11, 1] = 39,6;  Normtabelle[10, 2] = 21.07;     Normtabelle[10, 3] = 36;    Normtabelle[10, 4] = 15;
+                    //Bezeichnung                   // Kopfgröße                    //Kerndurchmesser               //Schlüsselweite           //Kopfhöhe
+                    Normtabelle[0, 0] = 4;          Normtabelle[0, 1] = 7.7;        Normtabelle[0, 2] = 3.40;       Normtabelle[0, 3] = 7;      Normtabelle[0, 4] = 2.8;
+                    Normtabelle[1, 0] = 6;          Normtabelle[1, 1] = 11.1;       Normtabelle[1, 2] = 5.07;       Normtabelle[1, 3] = 10;     Normtabelle[1, 4] = 4;
+                    Normtabelle[2, 0] = 8;          Normtabelle[2, 1] = 14.4;       Normtabelle[2, 2] = 6.82;       Normtabelle[2, 3] = 13;     Normtabelle[2, 4] = 5.3;
+                    Normtabelle[3, 0] = 10;         Normtabelle[4, 1] = 18.9;       Normtabelle[3, 2] = 8.56;       Normtabelle[3, 3] = 17;     Normtabelle[3, 4] = 6.4;
+                    Normtabelle[4, 0] = 12;         Normtabelle[5, 1] = 21.1;       Normtabelle[4, 2] = 10.32;      Normtabelle[4, 3] = 19;     Normtabelle[4, 4] = 7.5;
+                    Normtabelle[5, 0] = 14;         Normtabelle[6, 1] = 24.5,       Normtabelle[5, 2] = 12.07;      Normtabelle[5, 3] = 21;     Normtabelle[5, 4] = 8.8;
+                    Normtabelle[6, 0] = 16;         Normtabelle[7, 1] = 26.8;       Normtabelle[6, 2] = 14.08;      Normtabelle[6, 3] = 24;     Normtabelle[6, 4] = 10;
+                    Normtabelle[7, 0] = 18;         Normtabelle[8, 1] = 30.1;       Normtabelle[7, 2] = 15.57;      Normtabelle[7, 3] = 27;     Normtabelle[7, 4] = 11.5;
+                    Normtabelle[8, 0] = 20;         Normtabelle[9, 1] = 33.5;       Normtabelle[8, 2] = 17.57;      Normtabelle[8, 3] = 30;     Normtabelle[8, 4] = 12.5;
+                    Normtabelle[9, 0] = 22;         Normtabelle[10, 1] = 35.7;      Normtabelle[9, 2] = 19.57;      Normtabelle[9, 3] = 34;     Normtabelle[9, 4] = 14;
+                    Normtabelle[10, 0] = 24;        Normtabelle[11, 1] = 40.0;      Normtabelle[10, 2] = 21.07;     Normtabelle[10, 3] = 36;    Normtabelle[10, 4] = 15;
 
 
-                case 1.2: // Vierkantschraube
+                case 1.2: // Vierkantschraube mit Kernansatz DIN 479
 
-                    double[,] Normtabelle2 = new double[10, 5];
+                    double[,] Normtabelle2 = new double[8, 5];
 
-                    //Bezeichnung                   // Kopfgröße                //Kerndurchmesser                   //Schlüsselweite               //Kopfhöhe
-                    Normtabelle2[0, 0] = 4;          Normtabelle2[0, 1] = 7.7;    Normtabelle2[0, 2] = 3.40;        Normtabelle2[0, 3] = 7;     Normtabelle2[0, 4] = 2.8;
-                    Normtabelle2[1, 0] = 6;          Normtabelle2[1, 1] = 11.1;   Normtabelle2[1, 2] = 5.07;        Normtabelle2[1, 3] = 10;    Normtabelle2[1, 4] = 4;
-                    Normtabelle2[2, 0] = 8;          Normtabelle2[2, 1] = 14.4;   Normtabelle2[2, 2] = 6.82;        Normtabelle2[2, 3] = 13;    Normtabelle2[2, 4] = 5.3;
-                    Normtabelle2[3, 0] = 10;         Normtabelle2[3, 1] = 17,8;   Normtabelle2[3, 2] = 8.56;        Normtabelle2[3, 3] = 17;    Normtabelle2[3, 4] = 6.4;
-                    Normtabelle2[4, 0] = 12;         Normtabelle2[4, 1] = 20;     Normtabelle2[4, 2] = 10.32;       Normtabelle2[4, 3] = 19;    Normtabelle2[4, 4] = 7.5;
-                    Normtabelle2[5, 0] = 14;         Normtabelle2[5, 1] = 24,5,   Normtabelle2[5, 2] = 12.07;       Normtabelle2[5, 3] = 21;    Normtabelle2[5, 4] = 8.8;
-                    Normtabelle2[6, 0] = 16;         Normtabelle2[6, 1] = 26,2;   Normtabelle2[6, 2] = 14.08;       Normtabelle2[6, 3] = 24;    Normtabelle2[6, 4] = 10;
-                    Normtabelle2[7, 0] = 18;         Normtabelle2[7, 1] = ;       Normtabelle2[7, 2] = 15.57;       Normtabelle2[7, 3] = ;      Normtabelle2[7, 4] = ;
-                    Normtabelle2[8, 0] = 20;         Normtabelle2[8, 1] = 33;     Normtabelle2[8, 2] = 17.57;       Normtabelle2[8, 3] = 30;    Normtabelle2[8, 4] = 12.5;
-                    Normtabelle2[9, 0] = 22;         Normtabelle2[9, 1] = ;       Normtabelle2[9, 2] = 19.57;       Normtabelle2[9, 3] = ;      Normtabelle2[9, 4] = ;
-                    Normtabelle2[10, 0] = 24;        Normtabelle2[10, 1] = 39,6;  Normtabelle2[10, 2] = 21.07;      Normtabelle2[10, 3] = 36;   Normtabelle2[10, 4] = 15;
+                    //Bezeichnung                   // Kopfgröße                    //Kerndurchmesser                   //Schlüsselweite               //Kopfhöhe
+                    Normtabelle2[0, 0] = 4;          Normtabelle2[0, 1] = 6;         Normtabelle2[0, 2] = 3.40;        Normtabelle2[0, 3] = 4;     Normtabelle2[0, 4] = 4;
+                    Normtabelle2[1, 0] = 6;          Normtabelle2[1, 1] = 8;        Normtabelle2[1, 2] = 5.07;        Normtabelle2[1, 3] = 6;    Normtabelle2[1, 4] = 6;
+                    Normtabelle2[2, 0] = 8;          Normtabelle2[2, 1] = 10;       Normtabelle2[2, 2] = 6.82;        Normtabelle2[2, 3] = 8;    Normtabelle2[2, 4] = 8;
+                    Normtabelle2[3, 0] = 10;         Normtabelle2[3, 1] = 13;       Normtabelle2[3, 2] = 8.56;        Normtabelle2[3, 3] = 10;    Normtabelle2[3, 4] = 10;
+                    Normtabelle2[4, 0] = 12;         Normtabelle2[4, 1] = 17;       Normtabelle2[4, 2] = 10.32;       Normtabelle2[4, 3] = 13;    Normtabelle2[4, 4] = 12;
+                    Normtabelle2[6, 0] = 16;         Normtabelle2[6, 1] = 22;       Normtabelle2[6, 2] = 14.08;       Normtabelle2[6, 3] = 17;    Normtabelle2[6, 4] = 16;
+                    Normtabelle2[8, 0] = 20;         Normtabelle2[8, 1] = 28;       Normtabelle2[8, 2] = 17.57;       Normtabelle2[8, 3] = 22;    Normtabelle2[8, 4] = 20;
+                    Normtabelle2[10, 0] = 24;        Normtabelle2[10, 1] = 32;      Normtabelle2[10, 2] = 21.07;      Normtabelle2[10, 3] = 24;   Normtabelle2[10, 4] = 22;
 
                 case 1.3: // Innenschskantschraube
 
-                    double[,] Normtabelle3 = new double[10, 5];
+                    double[,] Normtabelle3 = new double[11, 5];
 
                     //Bezeichnung                   // Kopfgröße                //Kerndurchmesser               //Schlüsselweite            //Kopfhöhe
                     Normtabelle3[0, 0] = 4;         Normtabelle3[0, 1] = 7.7;   Normtabelle3[0, 2] = 3.40;       Normtabelle3[0, 3] = 7;     Normtabelle3[0, 4] = 2.8;
                     Normtabelle3[1, 0] = 6;         Normtabelle3[1, 1] = 11.1;  Normtabelle3[1, 2] = 5.07;       Normtabelle3[1, 3] = 10;    Normtabelle3[1, 4] = 4;
                     Normtabelle3[2, 0] = 8;         Normtabelle3[2, 1] = 14.4;  Normtabelle3[2, 2] = 6.82;       Normtabelle3[2, 3] = 13;    Normtabelle3[2, 4] = 5.3;
-                    Normtabelle3[3, 0] = 10;        Normtabelle3[3, 1] = 17,8;  Normtabelle3[3, 2] = 8.56;       Normtabelle3[3, 3] = 17;    Normtabelle3[3, 4] = 6.4;
+                    Normtabelle3[3, 0] = 10;        Normtabelle3[3, 1] = 17.8;  Normtabelle3[3, 2] = 8.56;       Normtabelle3[3, 3] = 17;    Normtabelle3[3, 4] = 6.4;
                     Normtabelle3[4, 0] = 12;        Normtabelle3[4, 1] = 20;    Normtabelle3[4, 2] = 10.32;      Normtabelle3[4, 3] = 19;    Normtabelle3[4, 4] = 7.5;
-                    Normtabelle3[5, 0] = 14;        Normtabelle3[5, 1] = 24,5,  Normtabelle3[5, 2] = 12.07;      Normtabelle3[5, 3] = 21;    Normtabelle3[5, 4] = 8.8;
-                    Normtabelle3[6, 0] = 16;        Normtabelle3[6, 1] = 26,2;  Normtabelle3[6, 2] = 14.08;      Normtabelle3[6, 3] = 24;    Normtabelle3[6, 4] = 10;
+                    Normtabelle3[5, 0] = 14;        Normtabelle3[5, 1] = 24.5,  Normtabelle3[5, 2] = 12.07;      Normtabelle3[5, 3] = 21;    Normtabelle3[5, 4] = 8.8;
+                    Normtabelle3[6, 0] = 16;        Normtabelle3[6, 1] = 26.2;  Normtabelle3[6, 2] = 14.08;      Normtabelle3[6, 3] = 24;    Normtabelle3[6, 4] = 10;
                     Normtabelle3[7, 0] = 18;        Normtabelle3[7, 1] = ;      Normtabelle3[7, 2] = 15.57;      Normtabelle3[7, 3] = ;      Normtabelle3[7, 4] = ;
                     Normtabelle3[8, 0] = 20;        Normtabelle3[8, 1] = 33;    Normtabelle3[8, 2] = 17.57;      Normtabelle3[8, 3] = 30;    Normtabelle3[8, 4] = 12.5;
                     Normtabelle3[9, 0] = 22;        Normtabelle3[9, 1] = ;      Normtabelle3[9, 2] = 19.57;      Normtabelle3[9, 3] = ;      Normtabelle3[9, 4] = ;
-                    Normtabelle3[10, 0] = 24;       Normtabelle3[10, 1] = 39,6; Normtabelle3[10, 2] = 21.07;     Normtabelle3[10, 3] = 36;   Normtabelle3[10, 4] = 15;
+                    Normtabelle3[10, 0] = 24;       Normtabelle3[10, 1] = 39.6; Normtabelle3[10, 2] = 21.07;     Normtabelle3[10, 3] = 36;   Normtabelle3[10, 4] = 15;
 
                 case 1.4: // 
 
-                    double[,] Normtabelle4 = new double[10, 5];
+                    double[,] Normtabelle4 = new double[11, 5];
 
                     //Bezeichnung                  // Kopfgröße                //Kerndurchmesser                //Schlüsselweite           //Kopfhöhe
                     Normtabelle4[0, 0] = 0;         Normtabelle4[0, 1] = 0;    Normtabelle4[0, 2] = 3.40;       Normtabelle4[0, 3] = 0;     Normtabelle4[0, 4] = 0;
