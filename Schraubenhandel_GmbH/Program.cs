@@ -90,7 +90,7 @@ namespace Schraubenhandel_GmbH
                                 sigmaZul = Streckgrenzen / SicherheitNü;
                                 Fzul = sigmaZul * QuerschnittS;
 
-                                Console.WriteLine("\n" + Fzul + " N/mm^2");
+                                Console.WriteLine("Maximal zulässige Gesamtkraft:" + "\n" + Fzul + " N/mm^2");
                             }
                         }
                         
@@ -112,7 +112,7 @@ namespace Schraubenhandel_GmbH
                             {
                                 Console.WriteLine("Für Ihre individuelle Schraubenanpassung sind einige Eingabedaten erforderlich.");    //Textfeld ggf. bearbeiten !
 
-                                Console.WriteLine("Bitte Kerndurchmesser angeben");  
+                                Console.WriteLine("Bitte nennen Sie die gewünschte Gewindegröße:");  
                                 double ii = Convert.ToDouble(Console.ReadLine());
 
                                 PreisReady2.preis2 = MassenFunktion(ii, erstesAuswahl, 2);      //Methodenaufruf, mitgabe: Kerndurchmesser ii, Parameter ersteAAuswahl; 1 -> Masse statt Preisausgabe
