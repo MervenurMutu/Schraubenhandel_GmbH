@@ -153,9 +153,19 @@ namespace Schraubenhandel_GmbH
 
                             //Techn. Daten Wiedergabe     //Masseberechnung für Datenblatt 
 
-                            Console.WriteLine("Techniches Datenblatt zur von Ihnen erstellten Schraube:\nGesamtdurchmesser " + Vari.Gesamt + "\nMasse:" + MasseReady2.mass2 + " g");
                             
-
+                            Console.WriteLine("Techniches Datenblatt zur von Ihnen erstellten Schraube:\nGesamtdurchmesser " + Vari.Gesamt + "\nMasse:" + MasseReady2.mass2 + " g");
+                            Console.WriteLine("Speditionsdienst?\n(1) DHL\n(2) DPD");
+                            int dienst = Convert.ToInt32(Console.ReadLine());
+                            if(dienst == 1)
+                            {
+                                Console.WriteLine("Lieferzeit 1 - 3 Werktage");
+                            }
+                            if(dienst == 2)
+                            {
+                                Console.WriteLine("Lieferzeit 3 - 6 Wochen");
+                            }
+                         
                             Console.WriteLine("Vielen Dank");
                             //Schraubenschaft/Gewinde
                         }
