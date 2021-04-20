@@ -146,7 +146,7 @@ namespace Schraubenhandel_GmbH
 
                                 }
                                 
-                                Console.WriteLine("Sind alle Eingaben korrekt ?\n(1)Eingabe korrekt\n(2) für Wiederholung");
+                                Console.WriteLine("Sind alle Eingaben korrekt ?\n(1) Eingabe korrekt\n(2) für Wiederholung");
                                 Nachfrag.richtig = Convert.ToInt32(Console.ReadLine());
                             }
                             while (Nachfrag.richtig == 2);
