@@ -183,6 +183,19 @@ namespace Schraubenhandel_GmbH
 
                 case 1:
 
+                    double[,] Normtabelle = new double[10, 5];
+                      
+                    //Bezeichnung                  // Kopfgröße                //Kerndurchmesser          //Schlüsselweite           //Kopfhöhe
+                    Normtabelle[0, 0] = 2;         Normtabelle[0, 1] = 4.3;    Normtabelle[0, 2] = 3.1;   Normtabelle[0, 3] = 4;     Normtabelle[0, 4] = 1.4;
+                    Normtabelle[1, 0] = 4;         Normtabelle[1, 1] = 7.7;    Normtabelle[1, 2] = 5.9;   Normtabelle[1, 3] = 7;     Normtabelle[1, 4] = 2.8;
+
+
+
+
+
+
+
+
                     Gesamtdurchmesser gesamtdurchmesser = new Gesamtdurchmesser();
                     MetrischesGewinde Gewindedaten = new MetrischesGewinde();
 
@@ -475,7 +488,7 @@ namespace Schraubenhandel_GmbH
             
             class Trapezgewinde
             {
-                Console.WriteLine("Sowas haben wir nicht");
+                
   
             }          
 
