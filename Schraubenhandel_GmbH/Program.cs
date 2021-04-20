@@ -475,7 +475,7 @@ namespace Schraubenhandel_GmbH
             
             class Trapezgewinde
             {
-
+                Console.WriteLine("Sowas haben wir nicht");
   
             }          
 
