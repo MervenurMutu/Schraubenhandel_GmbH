@@ -488,7 +488,7 @@ namespace Schraubenhandel_GmbH
             
             class Trapezgewinde
             {
-                
+
   
             }          
 
