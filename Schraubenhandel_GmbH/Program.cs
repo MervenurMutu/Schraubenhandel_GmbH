@@ -131,13 +131,13 @@ namespace Schraubenhandel_GmbH
 
                                 switch (gewindeauswahl)                                        //Angaben zum Gewinde 
                                 {
-                                    case 1:                                                    //Case 1: Metrisches Gewinde nach ISO Norm
+                                    case 1:                                                    //Case 1: Metrisches Gewinde Winkel bestimmtbar
                                         {
                                             GewindeFreiBest.ergebniss = GewindeFreiBest.HöheFreiesGewinde();
                                             Vari.Gesamt = 2 * GewindeFreiBest.ergebniss + ii;
                                         }
                                         break;
-                                    case 2:                                                    //Case 2: Trapezgewinde nach ISO Norm
+                                    case 2:                                                    //Case 2: Trapezgewinde
                                         {
 
                                         }
@@ -151,6 +151,7 @@ namespace Schraubenhandel_GmbH
                             while (Nachfrag.richtig == 9);
 
                             //Techn. Daten Wiedergabe     //Masseberechnung für Datenblatt 
+
                             Console.WriteLine("Techniches Datenblatt zur von Ihnen erstellten Schraube:\nGesamtdurchmesser " + Vari.Gesamt + "\nMasse:" + MasseReady2.mass2 + " g");
                             
 
@@ -189,7 +190,7 @@ namespace Schraubenhandel_GmbH
                     Console.WriteLine("Bitte wählen Sie eine Anzahl aus");
                     int anzahl = Convert.ToInt32(Console.ReadLine());
 
-                    double Höööhe = Gewindedaten.GewindeHöhe();
+                    double Höööhe = Gewindedaten.GewindeHöhe();                                                  //Metrisches Gewinde nac ISO Norm 
                     gesamtdurchmesser.Gewindebreite = gewindedurchmesser + (2 * Höööhe);
 
 
