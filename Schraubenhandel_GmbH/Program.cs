@@ -199,15 +199,13 @@ namespace Schraubenhandel_GmbH
 
                     Console.WriteLine("Technische Daten:\nZugfestigkeit: " + Zugfestigkeits + "\nStreckgrenze: " + Streckgrenze + "\nGewinde: M " + gewindedurchmesser + "\nGesamtdurchmesser: " + gesamtdurchmesser.Gewindebreite);
  
-                Console.WriteLine("Technische Daten:\nZugfestigkeit: " + Zugfestigkeits + "\nStreckgrenze: " + Streckgrenze + "\nGewinde: M" + gewindedurchmesser + "\nGesamtdurchmesser:" + gesamtdurchmesser.Gewindebreite);
-
 
 
 
                     break;
                 default:
 
-                    Console.WriteLine("Ungültige Eingabe");
+                    Console.WriteLine("Ungültige Eingabe\n");
                         goto Hauptmenü;
                     
 
