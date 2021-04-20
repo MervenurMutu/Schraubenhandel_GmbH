@@ -171,7 +171,7 @@ namespace Schraubenhandel_GmbH
                     Gesamtdurchmesser gesamtdurchmesser = new Gesamtdurchmesser();
                     MetrischesGewinde Gewindedaten = new MetrischesGewinde();
 
-                    Console.WriteLine("Normteile: Schrauben werden eingeteilt nach ihrer Festigkeit: Bitte whählen Sie eine Festigkeitsklasse.");
+                    Console.WriteLine("Normteile: Schrauben werden eingeteilt nach ihrer Festigkeit: Bitte wählen Sie eine Festigkeitsklasse.");
                     Console.WriteLine("(1) 4,6\n(2) 5,6\n(3) 5,8\n(4) 6,8\n(5) 8,8\n(6) 10,9\n(7) 12,9");
 
                     int u = Convert.ToInt32(Console.ReadLine());
