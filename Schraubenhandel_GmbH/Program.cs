@@ -190,9 +190,12 @@ namespace Schraubenhandel_GmbH
                     Normtabelle[1, 0] = 4;         Normtabelle[1, 1] = 7.7;    Normtabelle[1, 2] = 5.9;   Normtabelle[1, 3] = 7;     Normtabelle[1, 4] = 2.8;
                     Normtabelle[2, 0] = ;          Normtabelle[2, 1] = ;       Normtabelle[2, 2] = ;      Normtabelle[2, 3] = ;      Normtabelle[2, 4] = ;
                     Normtabelle[3, 0] = ;          Normtabelle[3, 1] = ;       Normtabelle[3, 2] = ;      Normtabelle[3, 3] = ;      Normtabelle[3, 4] = ;
-
-
-
+                    Normtabelle[4, 0] = ;          Normtabelle[4, 1] = ;       Normtabelle[4, 2] = ;      Normtabelle[4, 3] = ;      Normtabelle[4, 4] = ;
+                    Normtabelle[5, 0] = ;          Normtabelle[5, 1] = ;       Normtabelle[5, 2] = ;      Normtabelle[5, 3] = ;      Normtabelle[5, 4] = ;
+                    Normtabelle[6, 0] = ;          Normtabelle[6, 1] = ;       Normtabelle[6, 2] = ;      Normtabelle[6, 3] = ;      Normtabelle[6, 4] = ;
+                    Normtabelle[7, 0] = ;          Normtabelle[7, 1] = ;       Normtabelle[7, 2] = ;      Normtabelle[7, 3] = ;      Normtabelle[7, 4] = ;
+                    Normtabelle[8, 0] = ;          Normtabelle[8, 1] = ;       Normtabelle[8, 2] = ;      Normtabelle[8, 3] = ;      Normtabelle[8, 4] = ;
+                    Normtabelle[9, 0] = ;          Normtabelle[9, 1] = ;       Normtabelle[9, 2] = ;      Normtabelle[9, 3] = ;      Normtabelle[9, 4] = ;
 
 
 
