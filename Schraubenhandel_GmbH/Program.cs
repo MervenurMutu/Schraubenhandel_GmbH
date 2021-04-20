@@ -104,7 +104,7 @@ namespace Schraubenhandel_GmbH
 
                             GewindeFrei GewindeFreiBest = new GewindeFrei();
 
-                            NurMasse MasseReady2 = new NurMasse();
+                            NurPreis PreisReady2 = new NurPreis();
 
                             Variable Vari = new Variable();
 
@@ -115,7 +115,7 @@ namespace Schraubenhandel_GmbH
                                 Console.WriteLine("Bitte Kerndurchmesser angeben");  
                                 double ii = Convert.ToDouble(Console.ReadLine());
 
-                                MasseReady2.mass2 = MassenFunktion(ii, erstesAuswahl, 1);      //Methodenaufruf, mitgabe: Kerndurchmesser ii, Parameter ersteAAuswahl; 1 -> Masse statt Preisausgabe
+                                PreisReady2.preis2 = MassenFunktion(ii, erstesAuswahl, 2);      //Methodenaufruf, mitgabe: Kerndurchmesser ii, Parameter ersteAAuswahl; 1 -> Masse statt Preisausgabe
                                 
                                
 
@@ -151,10 +151,12 @@ namespace Schraubenhandel_GmbH
                             }
                             while (Nachfrag.richtig == 2);
 
+                            Console.WriteLine("Anzahl angeben");
+                            int anzzal = Convert.ToInt32(Console.ReadLine());
                             //Techn. Daten Wiedergabe     //Masseberechnung für Datenblatt 
 
-                            
-                            Console.WriteLine("Techniches Datenblatt zur von Ihnen erstellten Schraube:\nGesamtdurchmesser " + Vari.Gesamt + "\nMasse:" + MasseReady2.mass2 + " g");
+                            double gesamtpreiss = PreisReady2.preis2 * anzzal + 10;
+                            Console.WriteLine("Techniches Datenblatt zur von Ihnen erstellten Schraube:\nGesamtdurchmesser " + Vari.Gesamt + "\nPreis (Setzt sich zusammen aus Werkstoffkosten und 10$ für Versand und Herstellung : " + gesamtpreiss + " $");
                             Console.WriteLine("Speditionsdienst?\n(1) DHL\n(2) DPD");
                             int dienst = Convert.ToInt32(Console.ReadLine());
                             if(dienst == 1)
@@ -581,10 +583,9 @@ namespace Schraubenhandel_GmbH
 
             double Werkstoffpreis;
 
-
-            Werkstoffpreis = (masse / 1000) * preisEnd;
-
             masse = (gesamtvolumen / 1000) * dichteEnd;
+            Werkstoffpreis = (masse / 1000) * preisEnd;
+     
             if(zweiteAuswahl ==1)
             {
                 return masse;
@@ -599,9 +600,9 @@ namespace Schraubenhandel_GmbH
                 return 0;
         }
         // Masseklasse 
-        class NurMasse
+        class NurPreis
         {
-            public double mass2 { get; set; }
+            public double preis2 { get; set; }
         }
 
        
