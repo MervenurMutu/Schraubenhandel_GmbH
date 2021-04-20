@@ -165,6 +165,7 @@ namespace Schraubenhandel_GmbH
                             {
                                 Console.WriteLine("Lieferzeit 3 - 6 Wochen");
                             }
+
                          
                             Console.WriteLine("Vielen Dank");
                             //Schraubenschaft/Gewinde
@@ -488,7 +489,8 @@ namespace Schraubenhandel_GmbH
             public double HöheFreiesGewinde()
             {
                 double Steigungdurch2 = Steigung / 2;
-                double Tangens = Math.Tan(Flankenwinkel / 2);
+                double InRad = Flankenwinkel / (180 / Math.PI);
+                double Tangens = Math.Tan(InRad / 2);
                 HöheGewindeFrei = Steigungdurch2 / Tangens;
                 return HöheGewindeFrei;
             }
