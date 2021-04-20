@@ -18,6 +18,7 @@ namespace Schraubenhandel_GmbH
             Console.WriteLine("Sehr geehrter Kunde\nVielen Dank, dass Sie sich für uns entschieden haben\nWir bieten Ihnen folgendes an:\n(1) Normteile (2) Individuelle Schraubenanpassung und Berechnungen");
             int anfang = Convert.ToInt32(Console.ReadLine());
 
+            
             double[,] festigkeitsklasse = new double[7, 3];
 
             //Festigkeitsklasse       //Zugfestigkeit in [Nmm2]           //Streckgrenze in [Nmm2]
@@ -55,7 +56,7 @@ namespace Schraubenhandel_GmbH
                             int zweitesAuswahl = Convert.ToInt32(Console.ReadLine());
 
 
-                            if (zweitesAuswahl == 2)
+                            if (zweitesAuswahl == 1)
                             {
                                 Console.WriteLine("Kerndurchmesser angeben");
                                 double ii = Convert.ToDouble(Console.ReadLine());
@@ -63,12 +64,12 @@ namespace Schraubenhandel_GmbH
                                 Console.WriteLine("Die Masse beträgt " + MasseReady + " g");
                 
                             }
-                            if(zweitesAuswahl ==1)
+                            if(zweitesAuswahl ==2)
                             {
                                 Console.WriteLine("Kerndurchmesser angeben");
                                 double ii = Convert.ToDouble(Console.ReadLine());
                                 double PreisReady = MassenFunktion(ii, erstesAuswahl, zweitesAuswahl);
-                                Console.WriteLine("Der Preis beträgt " + PreisReady + " $");
+                                Console.WriteLine("Der Preis beträgt " + (PreisReady /1000) + " $");
                             }
                             if (zweitesAuswahl == 3)
                             {
@@ -195,11 +196,16 @@ namespace Schraubenhandel_GmbH
 
 
                     Console.WriteLine("Sie haben sich für " + anzahl + " Schrauben der Festigkeitsklasse " + festigkeitsklasse[r, 0] + " entschieden:");
-                    Console.WriteLine("Technische Daten:\nZugfestigkeit: " + Zugfestigkeits + "\nStreckgrenze: " + Streckgrenze + "\nGewinde: M" + gewindedurchmesser + "Gesamtdurchmesser:" + gesamtdurchmesser.Gewindebreite);
+                    Console.WriteLine("Technische Daten:\nZugfestigkeit: " + Zugfestigkeits + "\nStreckgrenze: " + Streckgrenze + "\nGewinde: M " + gewindedurchmesser + "\nGesamtdurchmesser: " + gesamtdurchmesser.Gewindebreite);
 
 
 
                     break;
+                default:
+
+                    Console.WriteLine("Ungültige Eingabe");
+                        goto Hauptmenü;
+                    
 
 
 
@@ -555,7 +561,7 @@ namespace Schraubenhandel_GmbH
             Preis[0] = 3.63;   //Baustahl S235JR
             Preis[1] = 10.28;    //Vergütungsstahl 34CrNiMo6
             Preis[2] = 7.13;   //Messing CuZn37
-            Preis[4] = 9.89;   //Aluminiumlegierung ENAW-AlSi1MgMn
+            Preis[3] = 9.89;   //Aluminiumlegierung ENAW-AlSi1MgMn
 
             double preisEnd = Preis[y];
 
