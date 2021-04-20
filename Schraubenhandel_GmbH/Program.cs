@@ -188,6 +188,8 @@ namespace Schraubenhandel_GmbH
                     //Bezeichnung                  // Kopfgröße                //Kerndurchmesser          //Schlüsselweite           //Kopfhöhe
                     Normtabelle[0, 0] = 2;         Normtabelle[0, 1] = 4.3;    Normtabelle[0, 2] = 3.1;   Normtabelle[0, 3] = 4;     Normtabelle[0, 4] = 1.4;
                     Normtabelle[1, 0] = 4;         Normtabelle[1, 1] = 7.7;    Normtabelle[1, 2] = 5.9;   Normtabelle[1, 3] = 7;     Normtabelle[1, 4] = 2.8;
+                    Normtabelle[2, 0] = ;          Normtabelle[2, 1] = ;       Normtabelle[2, 2] = ;      Normtabelle[2, 3] = ;      Normtabelle[2, 4] = ;
+                    Normtabelle[3, 0] = ;          Normtabelle[3, 1] = ;       Normtabelle[3, 2] = ;      Normtabelle[3, 3] = ;      Normtabelle[3, 4] = ;
 
 
 
