@@ -158,7 +158,7 @@ namespace Schraubenhandel_GmbH
 
                             double gesamtpreiss = PreisReady2.preis2 * anzzal + 10;
                             Console.WriteLine("Techniches Datenblatt zur von Ihnen erstellten Schraube:\nGesamtdurchmesser " + Vari.Gesamt + "\nPreis (Setzt sich zusammen aus Werkstoffkosten und 10$ für Versand und Herstellung : " + gesamtpreiss + " $");
-                            Console.WriteLine("Speditionsdienst?\n(1) DHL\n(2) DPD");
+                            Console.WriteLine("Speditionsdienst?\n(1) DHL\n(2) DPD\n(3) Hermes");
                             int dienst = Convert.ToInt32(Console.ReadLine());
                             if (dienst == 1)
                             {
@@ -168,6 +168,11 @@ namespace Schraubenhandel_GmbH
                             {
                                 Console.WriteLine("Lieferzeit 3 - 6 Wochen");
                             }
+                            if (dienst == 3)
+                            {
+                                Console.WriteLine("Das Paket kommt nie an :(");
+                            }
+
 
 
                             Console.WriteLine("Vielen Dank");
