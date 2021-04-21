@@ -207,7 +207,7 @@ namespace Schraubenhandel_GmbH
                         Normtabelle[2, 0] = 8; Normtabelle[2, 1] = 14.4; Normtabelle[2, 2] = 6.82; Normtabelle[2, 3] = 13; Normtabelle[2, 4] = 5.3;
                         Normtabelle[3, 0] = 10; Normtabelle[3, 1] = 18.9; Normtabelle[3, 2] = 8.56; Normtabelle[3, 3] = 17; Normtabelle[3, 4] = 6.4;
                         Normtabelle[4, 0] = 12; Normtabelle[4, 1] = 21.1; Normtabelle[4, 2] = 10.32; Normtabelle[4, 3] = 19; Normtabelle[4, 4] = 7.5;
-                        Normtabelle[5, 0] = 14; Normtabelle[5, 1] = 24.5,       Normtabelle[5, 2] = 12.07; Normtabelle[5, 3] = 21; Normtabelle[5, 4] = 8.8;
+                        Normtabelle[5, 0] = 14; Normtabelle[5, 1] = 24.5;       Normtabelle[5, 2] = 12.07; Normtabelle[5, 3] = 21; Normtabelle[5, 4] = 8.8;
                         Normtabelle[6, 0] = 16; Normtabelle[6, 1] = 26.8; Normtabelle[6, 2] = 14.08; Normtabelle[6, 3] = 24; Normtabelle[6, 4] = 10;
                         Normtabelle[7, 0] = 18; Normtabelle[7, 1] = 30.1; Normtabelle[7, 2] = 15.57; Normtabelle[7, 3] = 27; Normtabelle[7, 4] = 11.5;
                         Normtabelle[8, 0] = 20; Normtabelle[8, 1] = 33.5; Normtabelle[8, 2] = 17.57; Normtabelle[8, 3] = 30; Normtabelle[8, 4] = 12.5;
@@ -267,21 +267,7 @@ namespace Schraubenhandel_GmbH
                     }
                     break;
 
-<<<<<<< HEAD
-                case 4: // Linsensenkschraube mit Schlitz DIN EN ISO 2010
-                    {
-                        double[,] Normtabelle5 = new double[5, 6];
 
-                        //Bezeichnung                    // Kopfgröße                   //Kerndurchmesser               //Schlüsselweite              //Kopftiefe                   // Kopfhöhe (Linsenhöhe)
-                        Normtabelle5[0, 0] = 4; Normtabelle5[0, 1] = 8.4; Normtabelle5[0, 2] = 3.40; Normtabelle5[0, 3] = 2.7; Normtabelle5[0, 4] = 2.7; Normtabelle5[0, 5] = 1.0;
-                        Normtabelle5[1, 0] = 5; Normtabelle5[1, 1] = 9.3; Normtabelle5[1, 2] = 5.07; Normtabelle5[1, 3] = 2.7; Normtabelle5[1, 4] = 2.7; Normtabelle5[1, 5] = 1.2;
-                        Normtabelle5[2, 0] = 6; Normtabelle5[2, 1] = 11.3; Normtabelle5[2, 2] = 6.82; Normtabelle5[2, 3] = 3.3; Normtabelle5[2, 4] = 3.3; Normtabelle5[2, 5] = 1.4;
-                        Normtabelle5[3, 0] = 8; Normtabelle5[3, 1] = 15.8; Normtabelle5[3, 2] = 10.32; Normtabelle5[3, 3] = 4.7; Normtabelle5[3, 4] = 4.7; Normtabelle5[3, 5] = 2.0;
-                        Normtabelle5[4, 0] = 10; Normtabelle5[4, 1] = 18.3; Normtabelle5[4, 2] = 12.07; Normtabelle5[4, 3] = 5.0; Normtabelle5[4, 4] = 5.0; Normtabelle5[4, 5] = 2.3;
-                    }
-                    break;
-            
-=======
                 case 5: // Linsensenkschraube mit Schlitz DIN EN ISO 2010
 
                     double[,] Normtabelle5 = new double[5, 6];
@@ -293,7 +279,6 @@ namespace Schraubenhandel_GmbH
                     Normtabelle5[3, 0] = 8;          Normtabelle5[3, 1] = 15.8;     Normtabelle5[3, 2] = 10.32;     Normtabelle5[3, 3] = 4.7;     Normtabelle5[3, 4] = 4.7;     Normtabelle5[3, 5] = 2.0;
                     Normtabelle5[4, 0] = 10;         Normtabelle5[4, 1] = 18.3;     Normtabelle5[4, 2] = 12.07;     Normtabelle5[4, 3] = 5.0;     Normtabelle5[4, 4] = 5.0;     Normtabelle5[4, 5] = 2.3;
                  
->>>>>>> 56adeb94a9aa4310a8b2d18f80073768b6145e8a
 
 
                     Gesamtdurchmesser gesamtdurchmesser = new Gesamtdurchmesser();
