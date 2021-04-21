@@ -110,8 +110,12 @@ namespace Schraubenhandel_GmbH
 
                             do
                             {
-                                Console.WriteLine("Für Ihre individuelle Schraubenanpassung sind einige Eingabedaten erforderlich.");    //Textfeld ggf. bearbeiten !
+                                Console.WriteLine("Für Ihre individuelle Schraubenanpassung sind einige Eingabedaten erforderlich.\n ");
+                                Console.WriteLine("Bitte wählen Sie einen Schraubentyp\n ");
+                                Console.WriteLine("(1) Sechskantschraube nach DIN EN ISO 4017\n(2) Vierkantschraube mit Kernansatz nach DIN 479 \n(3) Zylinderkopfschraube mit Innensechskant DIN EN ISO 4762\n(4) Zylinderkopfschraube mit Innensechskant nach DIN EN ISO 4762\n(5) Linsensenkschraube mit Schlitz nach DIN EN ISO 2010\n ");
+               
 
+                                
                                 Console.WriteLine("Bitte nennen Sie die gewünschte Gewindegröße:");  
                                 double ii = Convert.ToDouble(Console.ReadLine());
 
@@ -247,7 +251,7 @@ namespace Schraubenhandel_GmbH
                     Normtabelle4[8, 0] = 24;         Normtabelle4[8, 1] = 39;      Normtabelle4[8, 2] = 21.07;      Normtabelle4[8, 3] = 14;      Normtabelle4[8, 4] = 14;
 
 
-                case 4: // Linsensenkschraube mit Schlitz DIN EN ISO 2010
+                case 5: // Linsensenkschraube mit Schlitz DIN EN ISO 2010
 
                     double[,] Normtabelle5 = new double[5, 6];
 
