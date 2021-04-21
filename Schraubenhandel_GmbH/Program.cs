@@ -181,7 +181,7 @@ namespace Schraubenhandel_GmbH
 
                 //NORMTEILE (3)
 
-                case 1.1: // Sechskantschraube DIN EN ISO 4017 (durchgängiges Gewinde) / DIN EN ISO 4014 (mit Schaft)
+                case 1: // Sechskantschraube DIN EN ISO 4017 (durchgängiges Gewinde) / DIN EN ISO 4014 (mit Schaft)
 
                     double[,] Normtabelle = new double[11, 5];
                       
@@ -200,7 +200,7 @@ namespace Schraubenhandel_GmbH
                     Normtabelle[10, 0] = 24;        Normtabelle[10, 1] = 40.0;      Normtabelle[10, 2] = 21.07;     Normtabelle[10, 3] = 36;    Normtabelle[10, 4] = 15;
 
 
-                case 1.2: // Vierkantschraube mit Kernansatz DIN 479
+                case 2: // Vierkantschraube mit Kernansatz DIN 479
 
                     double[,] Normtabelle2 = new double[8, 5];
 
@@ -214,7 +214,7 @@ namespace Schraubenhandel_GmbH
                     Normtabelle2[6, 0] = 20;         Normtabelle2[6, 1] = 28;       Normtabelle2[6, 2] = 17.57;       Normtabelle2[6, 3] = 22;    Normtabelle2[6, 4] = 20;
                     Normtabelle2[7, 0] = 24;         Normtabelle2[7, 1] = 32;       Normtabelle2[7, 2] = 21.07;       Normtabelle2[7, 3] = 24;    Normtabelle2[7, 4] = 22;
 
-                case 1.3: // Zylinderkopfschraube mit Innensechskant DIN EN ISO 4762
+                case 3: // Zylinderkopfschraube mit Innensechskant DIN EN ISO 4762
 
                     double[,] Normtabelle3 = new double[11, 5];
 
@@ -231,7 +231,7 @@ namespace Schraubenhandel_GmbH
                     Normtabelle3[9, 0] = 22;        Normtabelle3[9, 1] = 33;        Normtabelle3[9, 2] = 19.57;      Normtabelle3[9, 3] = 17;       Normtabelle3[9, 4] = 22;
                     Normtabelle3[10, 0] = 24;       Normtabelle3[10, 1] = 36;       Normtabelle3[10, 2] = 21.07;     Normtabelle3[10, 3] = 19;      Normtabelle3[10, 4] = 24;
 
-                case 1.4: // Senkkopfschraube mit Innensechskant DIN EN ISO 10642
+                case 4: // Senkkopfschraube mit Innensechskant DIN EN ISO 10642
 
                     double[,] Normtabelle4 = new double[9, 5];
 
@@ -247,7 +247,7 @@ namespace Schraubenhandel_GmbH
                     Normtabelle4[8, 0] = 24;         Normtabelle4[8, 1] = 39;      Normtabelle4[8, 2] = 21.07;      Normtabelle4[8, 3] = 14;      Normtabelle4[8, 4] = 14;
 
 
-                case 1.4: // Linsensenkschraube mit Schlitz DIN EN ISO 2010
+                case 4: // Linsensenkschraube mit Schlitz DIN EN ISO 2010
 
                     double[,] Normtabelle5 = new double[5, 6];
 
