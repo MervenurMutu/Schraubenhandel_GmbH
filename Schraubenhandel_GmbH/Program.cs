@@ -190,9 +190,9 @@ namespace Schraubenhandel_GmbH
                         //NORMTEILE (3)
 
                         Console.WriteLine("Bitte wählen Sie einen Schraubentyp:\nSechskantschraube DIN EN ISO 4017 (durchgängiges Gewinde) / DIN EN ISO 4014 (mit Schaft)\nVierkantschraube mit Kernansatz DIN 479\nZylinderkopfschraube mit Innensechskant DIN EN ISO 4762\nSenkkopfschraube mit Innensechskant DIN EN ISO 10642\nLinsensenkschraube mit Schlitz DIN EN ISO 2010");
-
+                        
                         int rrr;
-                        rrr = 0;
+                        rrr = Convert.ToInt32(Console.ReadLine());
 
                         switch(rrr)
                             {
