@@ -190,24 +190,19 @@ namespace Schraubenhandel_GmbH
                     //NORMTEILE (3)
 
 
-                    Console.WriteLine("Bitte Länge angeben");
-                    int kr = Convert.ToInt32(Console.ReadLine());
 
-                    switch (kr):
-
-
-                case 1: // Sechskantschraube DIN EN ISO 4017 (durchgängiges Gewinde) / DIN EN ISO 4014 (mit Schaft)
+                case 11: // Sechskantschraube DIN EN ISO 4017 (durchgängiges Gewinde) / DIN EN ISO 4014 (mit Schaft)
                     {
                         double[,] Normtabelle = new double[11, 5];
 
 
-                        //Bezeichnung                   // Kopfgröße                    //Kerndurchmesser               //Schlüsselweite           //Kopfhöhe
+                        //Bezeichnung           // Kopfgröße             //Kerndurchmesser      //Schlüsselweite          //Kopfhöhe
                         Normtabelle[0, 0] = 4; Normtabelle[0, 1] = 7.7; Normtabelle[0, 2] = 3.40; Normtabelle[0, 3] = 7; Normtabelle[0, 4] = 2.8;
                         Normtabelle[1, 0] = 6; Normtabelle[1, 1] = 11.1; Normtabelle[1, 2] = 5.07; Normtabelle[1, 3] = 10; Normtabelle[1, 4] = 4;
                         Normtabelle[2, 0] = 8; Normtabelle[2, 1] = 14.4; Normtabelle[2, 2] = 6.82; Normtabelle[2, 3] = 13; Normtabelle[2, 4] = 5.3;
                         Normtabelle[3, 0] = 10; Normtabelle[3, 1] = 18.9; Normtabelle[3, 2] = 8.56; Normtabelle[3, 3] = 17; Normtabelle[3, 4] = 6.4;
                         Normtabelle[4, 0] = 12; Normtabelle[4, 1] = 21.1; Normtabelle[4, 2] = 10.32; Normtabelle[4, 3] = 19; Normtabelle[4, 4] = 7.5;
-                        Normtabelle[5, 0] = 14; Normtabelle[5, 1] = 24.5;       Normtabelle[5, 2] = 12.07; Normtabelle[5, 3] = 21; Normtabelle[5, 4] = 8.8;
+                        Normtabelle[5, 0] = 14; Normtabelle[5, 1] = 24.5; Normtabelle[5, 2] = 12.07; Normtabelle[5, 3] = 21; Normtabelle[5, 4] = 8.8;
                         Normtabelle[6, 0] = 16; Normtabelle[6, 1] = 26.8; Normtabelle[6, 2] = 14.08; Normtabelle[6, 3] = 24; Normtabelle[6, 4] = 10;
                         Normtabelle[7, 0] = 18; Normtabelle[7, 1] = 30.1; Normtabelle[7, 2] = 15.57; Normtabelle[7, 3] = 27; Normtabelle[7, 4] = 11.5;
                         Normtabelle[8, 0] = 20; Normtabelle[8, 1] = 33.5; Normtabelle[8, 2] = 17.57; Normtabelle[8, 3] = 30; Normtabelle[8, 4] = 12.5;
@@ -216,11 +211,11 @@ namespace Schraubenhandel_GmbH
                     }
                     break;
 
-                case 2: // Vierkantschraube mit Kernansatz DIN 479
+                case 12: // Vierkantschraube mit Kernansatz DIN 479
                     {
                         double[,] Normtabelle2 = new double[8, 5];
 
-                        //Bezeichnung                   // Kopfgröße                    //Kerndurchmesser                   //Schlüsselweite               //Kopfhöhe
+                        //Bezeichnung            // Kopfgröße           //Kerndurchmesser           //Schlüsselweite        //Kopfhöhe
                         Normtabelle2[0, 0] = 4; Normtabelle2[0, 1] = 6; Normtabelle2[0, 2] = 3.40; Normtabelle2[0, 3] = 4; Normtabelle2[0, 4] = 4;
                         Normtabelle2[1, 0] = 6; Normtabelle2[1, 1] = 8; Normtabelle2[1, 2] = 5.07; Normtabelle2[1, 3] = 6; Normtabelle2[1, 4] = 6;
                         Normtabelle2[2, 0] = 8; Normtabelle2[2, 1] = 10; Normtabelle2[2, 2] = 6.82; Normtabelle2[2, 3] = 8; Normtabelle2[2, 4] = 8;
@@ -232,11 +227,11 @@ namespace Schraubenhandel_GmbH
                     }
                     break;
 
-                case 3: // Zylinderkopfschraube mit Innensechskant DIN EN ISO 4762
+                case 13: // Zylinderkopfschraube mit Innensechskant DIN EN ISO 4762
                     {
                         double[,] Normtabelle3 = new double[11, 5];
 
-                        //Bezeichnung                   // Kopfgröße                    //Kerndurchmesser               //Schlüsselweite                //Kopfhöhe
+                        //Bezeichnung             // Kopfgröße         //Kerndurchmesser            //Schlüsselweite       //Kopfhöhe
                         Normtabelle3[0, 0] = 4; Normtabelle3[0, 1] = 7; Normtabelle3[0, 2] = 3.40; Normtabelle3[0, 3] = 3; Normtabelle3[0, 4] = 4;
                         Normtabelle3[1, 0] = 6; Normtabelle3[1, 1] = 10; Normtabelle3[1, 2] = 5.07; Normtabelle3[1, 3] = 5; Normtabelle3[1, 4] = 6;
                         Normtabelle3[2, 0] = 8; Normtabelle3[2, 1] = 13; Normtabelle3[2, 2] = 6.82; Normtabelle3[2, 3] = 6; Normtabelle3[2, 4] = 8;
@@ -250,25 +245,25 @@ namespace Schraubenhandel_GmbH
                         Normtabelle3[10, 0] = 24; Normtabelle3[10, 1] = 36; Normtabelle3[10, 2] = 21.07; Normtabelle3[10, 3] = 19; Normtabelle3[10, 4] = 24;
                     }
                     break;
-                case 4: // Senkkopfschraube mit Innensechskant DIN EN ISO 10642
+                case 14: // Senkkopfschraube mit Innensechskant DIN EN ISO 10642
                     {
                         double[,] Normtabelle4 = new double[9, 5];
 
                         //Bezeichnung                     // Kopfgröße                  //Kerndurchmesser                //Schlüsselweite              //Kopftiefe
-                        Normtabelle4[0, 0] = 4; Normtabelle4[0, 1] = 7.5; Normtabelle4[0, 2] = 3.40; Normtabelle4[0, 3] = 2.5; Normtabelle4[0, 4] = 1.9;
-                        Normtabelle4[1, 0] = 6; Normtabelle4[1, 1] = 11.3; Normtabelle4[1, 2] = 5.07; Normtabelle4[1, 3] = 4; Normtabelle4[1, 4] = 3.7;
-                        Normtabelle4[2, 0] = 8; Normtabelle4[2, 1] = 15.2; Normtabelle4[2, 2] = 6.82; Normtabelle4[2, 3] = 5; Normtabelle4[2, 4] = 5;
-                        Normtabelle4[3, 0] = 10; Normtabelle4[3, 1] = 19.2; Normtabelle4[3, 2] = 8.56; Normtabelle4[3, 3] = 6; Normtabelle4[3, 4] = 6.2;
-                        Normtabelle4[4, 0] = 12; Normtabelle4[4, 1] = 23.1; Normtabelle4[4, 2] = 10.32; Normtabelle4[4, 3] = 8; Normtabelle4[4, 4] = 7.4;
-                        Normtabelle4[5, 0] = 14; Normtabelle4[5, 1] = 30; Normtabelle4[5, 2] = 12.07; Normtabelle4[5, 3] = 10; Normtabelle4[5, 4] = 8.2;
-                        Normtabelle4[6, 0] = 16; Normtabelle4[6, 1] = 30; Normtabelle4[6, 2] = 14.08; Normtabelle4[6, 3] = 10; Normtabelle4[6, 4] = 8.8;
-                        Normtabelle4[7, 0] = 20; Normtabelle4[7, 1] = 36; Normtabelle4[7, 2] = 17.57; Normtabelle4[7, 3] = 12; Normtabelle4[7, 4] = 10.2;
-                        Normtabelle4[8, 0] = 24; Normtabelle4[8, 1] = 39; Normtabelle4[8, 2] = 21.07; Normtabelle4[8, 3] = 14; Normtabelle4[8, 4] = 14;
+                        Normtabelle4[0, 0] = 4;           Normtabelle4[0, 1] = 7.5;     Normtabelle4[0, 2] = 3.40; Normtabelle4[0, 3] = 2.5; Normtabelle4[0, 4] = 1.9;
+                        Normtabelle4[1, 0] = 6;           Normtabelle4[1, 1] = 11.3;    Normtabelle4[1, 2] = 5.07; Normtabelle4[1, 3] = 4; Normtabelle4[1, 4] = 3.7;
+                        Normtabelle4[2, 0] = 8;           Normtabelle4[2, 1] = 15.2;    Normtabelle4[2, 2] = 6.82; Normtabelle4[2, 3] = 5; Normtabelle4[2, 4] = 5;
+                        Normtabelle4[3, 0] = 10;          Normtabelle4[3, 1] = 19.2;    Normtabelle4[3, 2] = 8.56; Normtabelle4[3, 3] = 6; Normtabelle4[3, 4] = 6.2;
+                        Normtabelle4[4, 0] = 12;          Normtabelle4[4, 1] = 23.1;    Normtabelle4[4, 2] = 10.32; Normtabelle4[4, 3] = 8; Normtabelle4[4, 4] = 7.4;
+                        Normtabelle4[5, 0] = 14;          Normtabelle4[5, 1] = 30;      Normtabelle4[5, 2] = 12.07; Normtabelle4[5, 3] = 10; Normtabelle4[5, 4] = 8.2;
+                        Normtabelle4[6, 0] = 16;          Normtabelle4[6, 1] = 30; Normtabelle4[6, 2] = 14.08; Normtabelle4[6, 3] = 10; Normtabelle4[6, 4] = 8.8;
+                        Normtabelle4[7, 0] = 20;          Normtabelle4[7, 1] = 36; Normtabelle4[7, 2] = 17.57; Normtabelle4[7, 3] = 12; Normtabelle4[7, 4] = 10.2;
+                        Normtabelle4[8, 0] = 24;          Normtabelle4[8, 1] = 39; Normtabelle4[8, 2] = 21.07; Normtabelle4[8, 3] = 14; Normtabelle4[8, 4] = 14;
                     }
                     break;
 
 
-                case 5: // Linsensenkschraube mit Schlitz DIN EN ISO 2010
+                case 15: // Linsensenkschraube mit Schlitz DIN EN ISO 2010
 
                     double[,] Normtabelle5 = new double[5, 6];
 
