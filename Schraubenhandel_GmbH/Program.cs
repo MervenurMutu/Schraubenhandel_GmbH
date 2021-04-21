@@ -110,9 +110,17 @@ namespace Schraubenhandel_GmbH
 
                             do
                             {
-                                Console.WriteLine("Für Ihre individuelle Schraubenanpassung sind einige Eingabedaten erforderlich.");    //Textfeld ggf. bearbeiten !
+                                Console.WriteLine("Für Ihre individuelle Schraubenanpassung sind einige Eingabedaten erforderlich.\n ");
+                                Console.WriteLine("Bitte wählen Sie einen Schraubentyp\n ");
+                                Console.WriteLine("(1) Sechskantschraube nach DIN EN ISO 4017\n(2) Vierkantschraube mit Kernansatz nach DIN 479 \n(3) Zylinderkopfschraube mit Innensechskant DIN EN ISO 4762\n(4) Zylinderkopfschraube mit Innensechskant nach DIN EN ISO 4762\n(5) Linsensenkschraube mit Schlitz nach DIN EN ISO 2010\n ");
+               
+
 
                                 Console.WriteLine("Bitte nennen Sie die gewünschte Gewindegröße:");
+
+                                
+                                Console.WriteLine("Bitte nennen Sie die gewünschte Gewindegröße:");  
+
                                 double ii = Convert.ToDouble(Console.ReadLine());
 
                                 PreisReady2.preis2 = MassenFunktion(ii, erstesAuswahl, 2);      //Methodenaufruf, mitgabe: Kerndurchmesser ii, Parameter ersteAAuswahl; 1 -> Masse statt Preisausgabe
@@ -259,6 +267,7 @@ namespace Schraubenhandel_GmbH
                     }
                     break;
 
+<<<<<<< HEAD
                 case 4: // Linsensenkschraube mit Schlitz DIN EN ISO 2010
                     {
                         double[,] Normtabelle5 = new double[5, 6];
@@ -272,6 +281,19 @@ namespace Schraubenhandel_GmbH
                     }
                     break;
             
+=======
+                case 5: // Linsensenkschraube mit Schlitz DIN EN ISO 2010
+
+                    double[,] Normtabelle5 = new double[5, 6];
+
+                    //Bezeichnung                    // Kopfgröße                   //Kerndurchmesser               //Schlüsselweite              //Kopftiefe                   // Kopfhöhe (Linsenhöhe)
+                    Normtabelle5[0, 0] = 4;          Normtabelle5[0, 1] = 8.4;      Normtabelle5[0, 2] = 3.40;      Normtabelle5[0, 3] = 2.7;     Normtabelle5[0, 4] = 2.7;     Normtabelle5[0, 5] = 1.0;
+                    Normtabelle5[1, 0] = 5;          Normtabelle5[1, 1] = 9.3;      Normtabelle5[1, 2] = 5.07;      Normtabelle5[1, 3] = 2.7;     Normtabelle5[1, 4] = 2.7;     Normtabelle5[1, 5] = 1.2;
+                    Normtabelle5[2, 0] = 6;          Normtabelle5[2, 1] = 11.3;     Normtabelle5[2, 2] = 6.82;      Normtabelle5[2, 3] = 3.3;     Normtabelle5[2, 4] = 3.3;     Normtabelle5[2, 5] = 1.4;
+                    Normtabelle5[3, 0] = 8;          Normtabelle5[3, 1] = 15.8;     Normtabelle5[3, 2] = 10.32;     Normtabelle5[3, 3] = 4.7;     Normtabelle5[3, 4] = 4.7;     Normtabelle5[3, 5] = 2.0;
+                    Normtabelle5[4, 0] = 10;         Normtabelle5[4, 1] = 18.3;     Normtabelle5[4, 2] = 12.07;     Normtabelle5[4, 3] = 5.0;     Normtabelle5[4, 4] = 5.0;     Normtabelle5[4, 5] = 2.3;
+                 
+>>>>>>> 56adeb94a9aa4310a8b2d18f80073768b6145e8a
 
 
                     Gesamtdurchmesser gesamtdurchmesser = new Gesamtdurchmesser();
