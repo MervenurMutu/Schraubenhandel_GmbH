@@ -233,7 +233,7 @@ namespace Schraubenhandel_GmbH
                                     int ausgewählt0 = Convert.ToInt32(Console.ReadLine());
                                     Console.WriteLine("Bitte Gewindegröße angeben\n4\n6\n8\n10\n12\n16\n20\n24");
                                     int eingegeben0 = Convert.ToInt32(Console.ReadLine());
-                                    Console.WriteLine("Bitte LKänge angeben");
+                                    Console.WriteLine("Bitte Länge angeben");
                                     double LängeSechskant = Convert.ToDouble(Console.ReadLine());
 
                                     double KopfgrößeSechskant = Normtabelle[(eingegeben0 - 1), 1];
@@ -262,7 +262,7 @@ namespace Schraubenhandel_GmbH
                                     int ausgewählt = Convert.ToInt32(Console.ReadLine());
                                     Console.WriteLine("Bitte Gewindegröße angeben\n4\n6\n8\n10\n12\n16\n20\n24");
                                     int eingegeben = Convert.ToInt32(Console.ReadLine());
-                                    Console.WriteLine("Bitte LKänge angeben");
+                                    Console.WriteLine("Bitte Länge angeben");
                                     double Längevierkant = Convert.ToDouble(Console.ReadLine());
 
                                     double KopfgrößeVierkant = Normtabelle2[(eingegeben - 1), 1];
@@ -326,44 +326,6 @@ namespace Schraubenhandel_GmbH
 
                         }
 
-                        Gesamtdurchmesser gesamtdurchmesser = new Gesamtdurchmesser();
-                        MetrischesGewinde Gewindedaten = new MetrischesGewinde();
-
-
-                        Console.WriteLine("Normteile: Schrauben werden eingeteilt nach ihrer Festigkeit: Bitte wählen Sie eine der folgenden Festigkeitsklassen:");
-
-                        Console.WriteLine("(1) 4,6\n(2) 5,6\n(3) 5,8\n(4) 6,8\n(5) 8,8\n(6) 10,9\n(7) 12,9");
-
-                        int u = Convert.ToInt32(Console.ReadLine());
-                        int r = u - 1;
-                        double festigkeitsklasseEnd = festigkeitsklasse[r, 0];
-                        double Zugfestigkeits = festigkeitsklasse[r, 1];
-                        double Streckgrenze = festigkeitsklasse[r, 2];
-
-                        Console.WriteLine("Bitte geben Sie den Gewindedurchmesser in mm ein");
-                        double gewindedurchmesser = Convert.ToDouble(Console.ReadLine());
-
-                        Console.WriteLine("Bitte geben Sie die gewünschte Gewindegröße in mm ein:");
-                        double gewindedurchmessers = Convert.ToDouble(Console.ReadLine());
-
-                        Console.WriteLine("Bitte geben Sie die gewünschte Schraubenlänge in mm ein:");
-                        // double normschraubenlaenge = Convert.ToDouble(Console.ReadLine()),
-
-
-                        Console.WriteLine("Bitte Steigung angeben");
-                        Gewindedaten.Steigung = Convert.ToDouble(Console.ReadLine());
-
-                        Console.WriteLine("Bitte wählen Sie eine Anzahl aus");
-                        int anzahl = Convert.ToInt32(Console.ReadLine());
-
-                        double Höööhe = Gewindedaten.GewindeHöhe();                                                  //Metrisches Gewinde nac ISO Norm 
-                        gesamtdurchmesser.Gewindebreite = gewindedurchmesser + (2 * Höööhe);
-
-                        Console.WriteLine("Sie haben sich für " + anzahl + " Schrauben der Festigkeitsklasse " + festigkeitsklasse[r, 0] + " entschieden:");
-
-
-
-                        Console.WriteLine("Technische Daten:\nZugfestigkeit: " + Zugfestigkeits + "\nStreckgrenze: " + Streckgrenze + "\nGewinde: M " + gewindedurchmesser + "\nGesamtdurchmesser: " + gesamtdurchmesser.Gewindebreite);
                     }
 
                     break;
