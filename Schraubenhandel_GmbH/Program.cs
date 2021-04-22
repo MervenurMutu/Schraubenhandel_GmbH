@@ -232,6 +232,9 @@ namespace Schraubenhandel_GmbH
                                         Console.WriteLine("Bitte Länge angeben");
                                         double LängeSechskant = Convert.ToDouble(Console.ReadLine());
 
+                                        Console.WriteLine("Bitte nennen Sie die gewünschte Anzahl;");
+                                        int anzzal = Convert.ToInt32(Console.ReadLine());
+
                                         double KopfgrößeSechskant = Normtabelle[(eingegeben0 - 1), 1];
                                         double KerndurchmesserSechskant = Normtabelle[(eingegeben0 - 1), 2];
                                         double SchlüsselweiteSechskant = Normtabelle[(eingegeben0 - 1), 2];
@@ -260,6 +263,9 @@ namespace Schraubenhandel_GmbH
                                         int eingegeben = Convert.ToInt32(Console.ReadLine());
                                         Console.WriteLine("Bitte Länge angeben");
                                         double Längevierkant = Convert.ToDouble(Console.ReadLine());
+
+                                        Console.WriteLine("Bitte nennen Sie die gewünschte Anzahl;");
+                                        int anzzal = Convert.ToInt32(Console.ReadLine());
 
                                         double KopfgrößeVierkant = Normtabelle2[(eingegeben - 1), 1];
                                         double KerndurchmesserVierkant = Normtabelle2[(eingegeben - 1), 2];
@@ -293,6 +299,9 @@ namespace Schraubenhandel_GmbH
                                         int eingegeben = Convert.ToInt32(Console.ReadLine());
                                         Console.WriteLine("Bitte Länge angeben");
                                         double LängeInnensechskannt = Convert.ToDouble(Console.ReadLine());
+
+                                        Console.WriteLine("Bitte nennen Sie die gewünschte Anzahl;");
+                                        int anzzal = Convert.ToInt32(Console.ReadLine());
 
                                         double KopfgrößeInnensechskant = Normtabelle3[(eingegeben - 1), 1];
                                         double KerndurchmesserInnensechskant = Normtabelle3[(eingegeben - 1), 2];
@@ -340,8 +349,7 @@ namespace Schraubenhandel_GmbH
                             }
                         while (Nachfrag.richtig == 2);
 
-                        Console.WriteLine("Bitte nennen Sie die gewünschte Anzahl;");
-                        int anzzal = Convert.ToInt32(Console.ReadLine());
+                        
 
                         Lieferdienst();
 
