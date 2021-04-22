@@ -730,7 +730,7 @@ namespace Schraubenhandel_GmbH
 
             if (welcheMethode == 1)
             {
-                double MasseVierkant = dichtee * ((Kopfgr * Kopfh) + (Längee * Kerndurch));
+                double MasseVierkant = dichtee * (((Kopfgr * Kopfh) + (Längee * Kerndurch)) / 1000);
                 Console.WriteLine("Die Masse ist" + MasseVierkant + " g");
             }
             if (welcheMethode == 2)
@@ -747,7 +747,7 @@ namespace Schraubenhandel_GmbH
             {
                 double Dreieckhalb = SW / Math.Sqrt(3);
                 double Sechseck = Math.Sqrt(3) * (((3 * Dreieckhalb * Dreieckhalb)) / 2);
-                double MasseSechkant = dichtee * ((Sechseck * Kopfh) + (Längee * Kerndurch));
+                double MasseSechkant = dichtee * (((Sechseck * Kopfh) + (Längee * Kerndurch)) / 1000);
                 Console.WriteLine("Die Masse ist" + MasseSechkant + " g");
             }
             if (welcheMethode == 2)
