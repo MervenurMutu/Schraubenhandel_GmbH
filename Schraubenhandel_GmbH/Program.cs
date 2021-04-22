@@ -203,7 +203,6 @@ namespace Schraubenhandel_GmbH
                         int welchedichte = Convert.ToInt32(Console.ReadLine());
                         double diedichte = dichte[welchedichte - 1];
 
-                        Console.WriteLine("Wir bieten folgende Schraubentypen an:\nSechskantschraube DIN EN ISO 4017 (durchgängiges Gewinde) / DIN EN ISO 4014 (mit Schaft)\nVierkantschraube mit Kernansatz DIN 479\nZylinderkopfschraube mit Innensechskant DIN EN ISO 4762\nSenkkopfschraube mit Innensechskant DIN EN ISO 10642\nLinsensenkschraube mit Schlitz DIN EN ISO 2010");
 
                         Console.WriteLine("\nBitte wählen Sie einen der folgenden Schraubentypen:\n(1) Sechskantschrauben nach DIN EN ISO 4017 (durchgängiges Gewinde) bzw. nach DIN EN ISO 4014 (mit Schaft)\n(2) Vierkantschrauben mit Kernansatz nach DIN 479\n(3) Zylinderkopfschrauben mit Innensechskant nach DIN EN ISO 4762\n(4) Senkkopfschrauben mit Innensechskant nach DIN EN ISO 10642\n(5) Linsensenkschrauben mit Schlitz nach DIN EN ISO 2010");
 
