@@ -15,7 +15,7 @@ namespace Schraubenhandel_GmbH
 
         {
         Hauptmenü:
-            Console.WriteLine("Sehr geehrter Kunde\nVielen Dank, dass Sie sich für uns entschieden haben\nWir bieten Ihnen folgendes an:\n(1) Normteile (2) Individuelle Schraubenanpassung und Berechnungen");
+            Console.WriteLine("Sehr geehrte Kundin, sehr geehrter Kunde,\nvielen Dank, dass Sie sich für uns entschieden haben\nWir bieten Ihnen folgendes an:\n(1) Normteile (2) Individuelle Schraubenanpassung und Berechnungen");
             int anfang = Convert.ToInt32(Console.ReadLine());
 
             
@@ -39,7 +39,7 @@ namespace Schraubenhandel_GmbH
                 case 2:
 
                     {
-                        Console.WriteLine("(1) Schraubeneinkauf: Hier können Sie Ihre eigene Schraube entwerfen und anschließend bei unserem Webshop Partner direkt bestellen\n(2) Schraubenberechnung: Hier berechnen wir für Sie alle wichtigen Daten für Schrauben mit Ihren Angaben\n\n0 für Hauptmenü\n");
+                        Console.WriteLine("(1) Schraubeneinkauf: Hier können Sie Ihre eigene Schrauben entwerfen und anschließend bei einem unserer Webshop Partner direkt bestellen\n(2) Schraubenberechnung: Hier berechnen wir für Sie alle wichtigen Daten für Schrauben mit Ihren Angaben\n\n0 für Hauptmenü\n");
 
 
                         int erstesAuswahl = Convert.ToInt32(Console.ReadLine());
@@ -73,18 +73,18 @@ namespace Schraubenhandel_GmbH
                             }
                             if (zweitesAuswahl == 3)
                             {
-                                Console.WriteLine("Bitte wählen Sie die Festigkeitsklasse");
-                                Console.WriteLine("(1) 4,6\n(2) 5,6\n(3) 5,8\n(4) 6,8\n(5) 8,8\n(6) 10,9\n(7) 12,9\nUnd einen Durchmesser in mm");
+                                Console.WriteLine("Bitte wählen Sie eine der folgenden Festigkeitsklassen:");
+                                Console.WriteLine("(1) 4,6\n(2) 5,6\n(3) 5,8\n(4) 6,8\n(5) 8,8\n(6) 10,9\n(7) 12,9\nBitte geben Sie den gewünschte Durchmesser in mm ein:");
                                 int f = Convert.ToInt32(Console.ReadLine());
                                 double durchmes = Convert.ToDouble(Console.ReadLine());
                                 int g = f - 1;
                                 double Streckgrenzen = festigkeitsklasse[g, 2];
-                                Console.WriteLine("Bitte Sicherheitsfaktor wählen");
+                                Console.WriteLine("Bitte geben Sie den gewünschten Sicherheitsfaktor ein:");
                                 double SicherheitNü = Convert.ToDouble(Console.ReadLine());
                                 double Fzul; double sigmaZul;
                                 double QuerschnittS;
                                 MetrischesGewinde QuerschnittGewinde = new MetrischesGewinde();
-                                Console.WriteLine("Bitte Steigung angeben");
+                                Console.WriteLine("Bitte geben Sie die gewünschte Steigung in mm ein:");
                                 QuerschnittGewinde.Steigung = Convert.ToDouble(Console.ReadLine());
                                 QuerschnittS = QuerschnittGewinde.QuerschnittSS();
                                 sigmaZul = Streckgrenzen / SicherheitNü;
@@ -120,15 +120,15 @@ namespace Schraubenhandel_GmbH
 
 
 
-                                Console.WriteLine("Nun zum Gewinde:\n(1) Metrisches Gewinde nach ISO Norm\n(2) Trapezgewinde nach ISO Norm");
+                                Console.WriteLine("Bitte wählen Sie eins der folgenden Gewindetypen:\n(1) Metrisches ISO-Gewinde nach DIN 13-1\n(2) Metrisches ISO-Trapezgewinde nach DIN 103");
 
                                 int gewindeauswahl = Convert.ToInt32(Console.ReadLine());
 
 
 
-                                Console.WriteLine("Bitte Steigung angeben");
+                                Console.WriteLine("Bitte geben Sie die gewünschte Steigung in mm an:");
                                 GewindeFreiBest.Steigung = Convert.ToDouble(Console.ReadLine());
-                                Console.WriteLine("Bitte Flankenwinkel angeben");
+                                Console.WriteLine("Bitte geben Sie den gewünchten Flankenwinkel an:");
                                 GewindeFreiBest.Flankenwinkel = Convert.ToDouble(Console.ReadLine());
 
                                 switch (gewindeauswahl)                                        //Angaben zum Gewinde 
@@ -147,12 +147,12 @@ namespace Schraubenhandel_GmbH
 
                                 }
 
-                                Console.WriteLine("Sind alle Eingaben korrekt ?\n(1) Eingabe korrekt\n(2) für Wiederholung");
+                                Console.WriteLine("Sind alle Eingaben korrekt?\n(1) Alle Eingaben sind korrekt.\n(2) Alle Eingaben wiederholen.");
                                 Nachfrag.richtig = Convert.ToInt32(Console.ReadLine());
                             }
                             while (Nachfrag.richtig == 2);
 
-                            Console.WriteLine("Anzahl angeben");
+                            Console.WriteLine("Bitte nennen Sie die gewünschte Anzahl;");
                             int anzzal = Convert.ToInt32(Console.ReadLine());
                             //Techn. Daten Wiedergabe     //Masseberechnung für Datenblatt 
 
@@ -189,7 +189,11 @@ namespace Schraubenhandel_GmbH
                     {
                         //NORMTEILE (3)
 
+<<<<<<< HEAD
                         Console.WriteLine("Bitte wählen Sie einen Schraubentyp:\nSechskantschraube DIN EN ISO 4017 (durchgängiges Gewinde) / DIN EN ISO 4014 (mit Schaft)\nVierkantschraube mit Kernansatz DIN 479\nZylinderkopfschraube mit Innensechskant DIN EN ISO 4762\nSenkkopfschraube mit Innensechskant DIN EN ISO 10642\nLinsensenkschraube mit Schlitz DIN EN ISO 2010");
+=======
+                        Console.WriteLine("Bitte wählen Sie einen der folgenden Schraubentypen:\n(1) Sechskantschrauben nach DIN EN ISO 4017 (durchgängiges Gewinde) bzw. nach DIN EN ISO 4014 (mit Schaft)\n(2) Vierkantschrauben mit Kernansatz nach DIN 479\n(3) Zylinderkopfschrauben mit Innensechskant nach DIN EN ISO 4762\n(4) Senkkopfschrauben mit Innensechskant nach DIN EN ISO 10642\n(5) Linsensenkschrauben mit Schlitz nach DIN EN ISO 2010");
+>>>>>>> 6bd386148a6b0c417c30ea0cc4704076cd0bd9d6
                         
                         int rrr;
                         rrr = Convert.ToInt32(Console.ReadLine());
@@ -285,7 +289,11 @@ namespace Schraubenhandel_GmbH
                         Gesamtdurchmesser gesamtdurchmesser = new Gesamtdurchmesser();
                         MetrischesGewinde Gewindedaten = new MetrischesGewinde();
 
+<<<<<<< HEAD
                         Console.WriteLine("Normteile: Schrauben werden eingeteilt nach ihrer Festigkeit: Bitte wählen Sie eine Festigkeitsklasse.");
+=======
+                        Console.WriteLine("Normteile: Schrauben werden eingeteilt nach ihrer Festigkeit: Bitte wählen Sie eine der folgenden Festigkeitsklassen:");
+>>>>>>> 6bd386148a6b0c417c30ea0cc4704076cd0bd9d6
                         Console.WriteLine("(1) 4,6\n(2) 5,6\n(3) 5,8\n(4) 6,8\n(5) 8,8\n(6) 10,9\n(7) 12,9");
 
                         int u = Convert.ToInt32(Console.ReadLine());
@@ -294,9 +302,19 @@ namespace Schraubenhandel_GmbH
                         double Zugfestigkeits = festigkeitsklasse[r, 1];
                         double Streckgrenze = festigkeitsklasse[r, 2];
 
+<<<<<<< HEAD
                         Console.WriteLine("Bitte geben Sie den Gewindedurchmesser in mm ein");
                         double gewindedurchmesser = Convert.ToDouble(Console.ReadLine());
 
+=======
+                        Console.WriteLine("Bitte geben Sie die gewünschte Gewindegröße in mm ein:");
+                        double gewindedurchmesser = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine("Bitte geben Sie die gewünschte Schraubenlänge in mm ein:");
+                       // double normschraubenlaenge = Convert.ToDouble(Console.ReadLine()),
+
+
+>>>>>>> 6bd386148a6b0c417c30ea0cc4704076cd0bd9d6
                         Console.WriteLine("Bitte Steigung angeben");
                         Gewindedaten.Steigung = Convert.ToDouble(Console.ReadLine());
 
@@ -307,7 +325,11 @@ namespace Schraubenhandel_GmbH
                         gesamtdurchmesser.Gewindebreite = gewindedurchmesser + (2 * Höööhe);
 
 
+<<<<<<< HEAD
                         Console.WriteLine("Sie haben sich für " + anzahl + " Schrauben der Festigkeitsklasse " + festigkeitsklasse[r, 0] + " entschieden:");
+=======
+                        Console.WriteLine("Sie haben sich für " + anzahl + " Schrauben der Festigkeitsklasse " + festigkeitsklasse[r, 0] + "entschieden:");
+>>>>>>> 6bd386148a6b0c417c30ea0cc4704076cd0bd9d6
 
                         Console.WriteLine("Technische Daten:\nZugfestigkeit: " + Zugfestigkeits + "\nStreckgrenze: " + Streckgrenze + "\nGewinde: M " + gewindedurchmesser + "\nGesamtdurchmesser: " + gesamtdurchmesser.Gewindebreite);
      }
@@ -649,7 +671,7 @@ namespace Schraubenhandel_GmbH
            
             volumenSchaftInSchraubenberechnung = SchaftberechnungInSchraubenberechnung.SchaftVolumen(KernInnenDurchmesser);
 
-            Console.WriteLine("Bitte Werkstoff angeben:\n(1) Baustahl S235JR\n(2) Vergütungsstahl 34CrNiMo6\n(3) Messing CuZn37\n(4) Aluminiumlegierung ENAW-AlSi1MgMn");
+            Console.WriteLine("Bitte wählen Sie einen der folgenden Werkstoff:\n(1) Baustahl S235JR nach DIN EN 10025-2\n(2) Vergütungsstahl 34CrNiMo6 nach DIN EN 10083-2\n(3) Messing CuZn37 nach DIN EN 12163\n(4) Aluminiumlegierung ENAW-AlSi1MgMn nach DIN EN 755-2");
             int xi;
 
             double gesamtvolumen = volumenSchaftInSchraubenberechnung + Kopf.Volumenx;
