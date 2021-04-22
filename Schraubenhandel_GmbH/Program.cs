@@ -286,6 +286,21 @@ namespace Schraubenhandel_GmbH
                                         Normtabelle3[8, 0] = 20; Normtabelle3[8, 1] = 30; Normtabelle3[8, 2] = 17.57; Normtabelle3[8, 3] = 17; Normtabelle3[8, 4] = 20;
                                         Normtabelle3[9, 0] = 22; Normtabelle3[9, 1] = 33; Normtabelle3[9, 2] = 19.57; Normtabelle3[9, 3] = 17; Normtabelle3[9, 4] = 22;
                                         Normtabelle3[10, 0] = 24; Normtabelle3[10, 1] = 36; Normtabelle3[10, 2] = 21.07; Normtabelle3[10, 3] = 19; Normtabelle3[10, 4] = 24;
+
+                                        Console.WriteLine("Bitte Aktion auswählen:(1) Masse");
+                                        int ausgewählt1 = Convert.ToInt32(Console.ReadLine());
+                                        Console.WriteLine("Bitte Gewindegröße angeben\n4\n6\n8\n10\n12\n16\n20\n24");
+                                        int eingegeben = Convert.ToInt32(Console.ReadLine());
+                                        Console.WriteLine("Bitte Länge angeben");
+                                        double LängeInnensechskannt = Convert.ToDouble(Console.ReadLine());
+
+                                        double KopfgrößeInnensechskant = Normtabelle3[(eingegeben - 1), 1];
+                                        double KerndurchmesserInnensechskant = Normtabelle3[(eingegeben - 1), 2];
+                                        double SchlüsselweiteInnensechkant = Normtabelle3[(eingegeben - 1), 2];
+                                        double KopfhöheInnensechskant = Normtabelle3[(eingegeben - 1), 3];
+
+                                        NormInnensechskant(ausgewählt1, KopfgrößeInnensechskant, KerndurchmesserInnensechskant, SchlüsselweiteInnensechkant, KopfhöheInnensechskant, diedichte, LängeInnensechskannt);
+
                                     }
                                     break;
                                 case 4:              // Senkkopfschraube mit Innensechskant DIN EN ISO 10642
@@ -755,17 +770,31 @@ namespace Schraubenhandel_GmbH
                 //PLATZHALTER
             }
 
+        }
 
+        static void NormInnensechskant(int welcheMethode, double Kopfgr, double Kerndurch, double SW, double Kopfh, double dichtee, double Längee)
+        {
+            if (welcheMethode == 1)
+            {
+                double Volumenaussen = ((((Kopfgr * Kopfgr) / 4)) * Math.PI) * Kopfh;
 
+                double Dreieckhalb = SW / Math.Sqrt(3);
+                double Volumeninnen = (Math.Sqrt(3) * (((3 * Dreieckhalb * Dreieckhalb)) / 2)) * (Kopfh / 2);
 
+                double MasseInnenSechskant = Volumenaussen - Volumeninnen;
 
+ 
 
-
-
-
-
+                Console.WriteLine("Die Masse ist" + MasseInnenSechskant + " g");
+            }
+            if (welcheMethode == 2)
+            {
+                //PLATZHALTER
+            }
 
         }
+
+
 
         static void Lieferdienst()
         {
