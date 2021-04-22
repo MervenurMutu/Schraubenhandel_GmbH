@@ -242,7 +242,7 @@ namespace Schraubenhandel_GmbH
 
                                         double Mass = NormSechskant(ausgewählt0, KopfgrößeSechskant, KerndurchmesserSechskant, SchlüsselweiteSechskant, KopfhöheSechskant, diedichte, LängeSechskant);
 
-                                        Console.WriteLine("Einzelmasse:" + Mass + "\nGesamtmasse:" + Mass * anzzal);
+                                        Console.WriteLine("Einzelmasse:" + Mass + " g" + "\nGesamtmasse:" + Mass * anzzal + " g");
                                     }
                                     break;
                                 case 2:            // Vierkantschraube mit Kernansatz DIN 479
@@ -275,7 +275,7 @@ namespace Schraubenhandel_GmbH
                                         double KopfhöheVierkant = Normtabelle2[(eingegeben - 1), 3];
 
                                         double Mass = NormVierkant(ausgewählt, KopfgrößeVierkant, KerndurchmesserVierkant, SchlüsselweiteVierkant, KopfhöheVierkant, diedichte, Längevierkant);
-                                        Console.WriteLine("Einzelmasse:" + Mass + "\nGesamtmasse:" + Mass * anzzal);
+                                        Console.WriteLine("Einzelmasse:" + Mass + " g" + "\nGesamtmasse:" + Mass * anzzal + " g");
                                     }
                                     break;
 
@@ -312,7 +312,7 @@ namespace Schraubenhandel_GmbH
                                         double KopfhöheInnensechskant = Normtabelle3[(eingegeben - 1), 3];
 
                                         double Mass = NormInnensechskant(ausgewählt1, KopfgrößeInnensechskant, KerndurchmesserInnensechskant, SchlüsselweiteInnensechkant, KopfhöheInnensechskant, diedichte, LängeInnensechskannt);
-                                        Console.WriteLine("Einzelmasse:" + Mass + "\nGesamtmasse:" + Mass * anzzal);
+                                        Console.WriteLine("Einzelmasse:" + Mass + " g"+  "\nGesamtmasse:" + Mass * anzzal + " g");
 
                                     }
                                     break;
