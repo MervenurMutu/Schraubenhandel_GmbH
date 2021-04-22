@@ -10,7 +10,7 @@ namespace Schraubenhandel_GmbH
     {
         static void Main(string[] args)
 
-       //HAUPTPROGRAMM (1)
+        //HAUPTPROGRAMM (1)
 
 
         {
@@ -18,7 +18,7 @@ namespace Schraubenhandel_GmbH
             Console.WriteLine("Sehr geehrte Kundin, sehr geehrter Kunde,\nvielen Dank, dass Sie sich für uns entschieden haben\nWir bieten Ihnen folgendes an:\n(1) Normteile (2) Individuelle Schraubenanpassung und Berechnungen");
             int anfang = Convert.ToInt32(Console.ReadLine());
 
-            
+
             double[,] festigkeitsklasse = new double[7, 3];
 
             //Festigkeitsklasse       //Zugfestigkeit in [Nmm2]           //Streckgrenze in [Nmm2]
@@ -189,17 +189,28 @@ namespace Schraubenhandel_GmbH
                     {
                         //NORMTEILE (3)
 
-<<<<<<< HEAD
-                        Console.WriteLine("Bitte wählen Sie einen Schraubentyp:\nSechskantschraube DIN EN ISO 4017 (durchgängiges Gewinde) / DIN EN ISO 4014 (mit Schaft)\nVierkantschraube mit Kernansatz DIN 479\nZylinderkopfschraube mit Innensechskant DIN EN ISO 4762\nSenkkopfschraube mit Innensechskant DIN EN ISO 10642\nLinsensenkschraube mit Schlitz DIN EN ISO 2010");
-=======
-                        Console.WriteLine("Bitte wählen Sie einen der folgenden Schraubentypen:\n(1) Sechskantschrauben nach DIN EN ISO 4017 (durchgängiges Gewinde) bzw. nach DIN EN ISO 4014 (mit Schaft)\n(2) Vierkantschrauben mit Kernansatz nach DIN 479\n(3) Zylinderkopfschrauben mit Innensechskant nach DIN EN ISO 4762\n(4) Senkkopfschrauben mit Innensechskant nach DIN EN ISO 10642\n(5) Linsensenkschrauben mit Schlitz nach DIN EN ISO 2010");
->>>>>>> 6bd386148a6b0c417c30ea0cc4704076cd0bd9d6
-                        
-                        int rrr;
-                        rrr = Convert.ToInt32(Console.ReadLine());
+                        //Werkstofftabellen:
+                        Console.WriteLine("Bitte WS wählen:\n(1) Baustahl S235JR\n(2) Vergütungsstahl 34CrNiMo6\n(3) Messing CuZn37\n(4) Aluminiumlegierung ENAW-AlSi1MgMn");
 
-                        switch(rrr)
-                            {
+                        double[] dichte = new double[8];  //Dichten in g/cm^3
+                        dichte[0] = 7.85;     //Baustahl S235JR
+                        dichte[1] = 8;    //Vergütungsstahl 34CrNiMo6
+                        dichte[2] = 8.44;     //Messing CuZn37
+                        dichte[3] = 2.7;     //Aluminiuimlegierung ENAW-AlSi1MgMn
+
+
+                        int welchedichte = Convert.ToInt32(Console.ReadLine());
+                        double diedichte = dichte[welchedichte - 1];
+
+                        Console.WriteLine("Bitte wählen Sie einen Schraubentyp:\nSechskantschraube DIN EN ISO 4017 (durchgängiges Gewinde) / DIN EN ISO 4014 (mit Schaft)\nVierkantschraube mit Kernansatz DIN 479\nZylinderkopfschraube mit Innensechskant DIN EN ISO 4762\nSenkkopfschraube mit Innensechskant DIN EN ISO 10642\nLinsensenkschraube mit Schlitz DIN EN ISO 2010");
+
+                        Console.WriteLine("Bitte wählen Sie einen der folgenden Schraubentypen:\n(1) Sechskantschrauben nach DIN EN ISO 4017 (durchgängiges Gewinde) bzw. nach DIN EN ISO 4014 (mit Schaft)\n(2) Vierkantschrauben mit Kernansatz nach DIN 479\n(3) Zylinderkopfschrauben mit Innensechskant nach DIN EN ISO 4762\n(4) Senkkopfschrauben mit Innensechskant nach DIN EN ISO 10642\n(5) Linsensenkschrauben mit Schlitz nach DIN EN ISO 2010");
+
+                        int NormteilSwitch;
+                        NormteilSwitch = Convert.ToInt32(Console.ReadLine());
+
+                        switch (NormteilSwitch)
+                        {
                             case 1:               // Sechskantschraube DIN EN ISO 4017 (durchgängiges Gewinde) / DIN EN ISO 4014 (mit Schaft)
                                 {
                                     double[,] Normtabelle = new double[11, 5];
@@ -217,6 +228,20 @@ namespace Schraubenhandel_GmbH
                                     Normtabelle[8, 0] = 20; Normtabelle[8, 1] = 33.5; Normtabelle[8, 2] = 17.57; Normtabelle[8, 3] = 30; Normtabelle[8, 4] = 12.5;
                                     Normtabelle[9, 0] = 22; Normtabelle[9, 1] = 35.7; Normtabelle[9, 2] = 19.57; Normtabelle[9, 3] = 34; Normtabelle[9, 4] = 14;
                                     Normtabelle[10, 0] = 24; Normtabelle[10, 1] = 40.0; Normtabelle[10, 2] = 21.07; Normtabelle[10, 3] = 36; Normtabelle[10, 4] = 15;
+
+                                    Console.WriteLine("Bitte Aktion auswählen:(1) Masse");
+                                    int ausgewählt0 = Convert.ToInt32(Console.ReadLine());
+                                    Console.WriteLine("Bitte Gewindegröße angeben\n4\n6\n8\n10\n12\n16\n20\n24");
+                                    int eingegeben0 = Convert.ToInt32(Console.ReadLine());
+                                    Console.WriteLine("Bitte LKänge angeben");
+                                    double LängeSechskant = Convert.ToDouble(Console.ReadLine());
+
+                                    double KopfgrößeSechskant = Normtabelle[(eingegeben0 - 1), 1];
+                                    double KerndurchmesserSechskant = Normtabelle[(eingegeben0 - 1), 2];
+                                    double SchlüsselweiteSechskant = Normtabelle[(eingegeben0 - 1), 2];
+                                    double KopfhöheSechskant = Normtabelle[(eingegeben0 - 1), 3];
+
+                                    NormSechskant(ausgewählt0, KopfgrößeSechskant, KerndurchmesserSechskant, SchlüsselweiteSechskant, KopfhöheSechskant, diedichte, LängeSechskant);
                                 }
                                 break;
                             case 2:            // Vierkantschraube mit Kernansatz DIN 479
@@ -232,6 +257,20 @@ namespace Schraubenhandel_GmbH
                                     Normtabelle2[5, 0] = 16; Normtabelle2[5, 1] = 22; Normtabelle2[5, 2] = 14.08; Normtabelle2[5, 3] = 17; Normtabelle2[5, 4] = 16;
                                     Normtabelle2[6, 0] = 20; Normtabelle2[6, 1] = 28; Normtabelle2[6, 2] = 17.57; Normtabelle2[6, 3] = 22; Normtabelle2[6, 4] = 20;
                                     Normtabelle2[7, 0] = 24; Normtabelle2[7, 1] = 32; Normtabelle2[7, 2] = 21.07; Normtabelle2[7, 3] = 24; Normtabelle2[7, 4] = 22;
+
+                                    Console.WriteLine("Bitte Aktion auswählen:(1) Masse");
+                                    int ausgewählt = Convert.ToInt32(Console.ReadLine());
+                                    Console.WriteLine("Bitte Gewindegröße angeben\n4\n6\n8\n10\n12\n16\n20\n24");
+                                    int eingegeben = Convert.ToInt32(Console.ReadLine());
+                                    Console.WriteLine("Bitte LKänge angeben");
+                                    double Längevierkant = Convert.ToDouble(Console.ReadLine());
+
+                                    double KopfgrößeVierkant = Normtabelle2[(eingegeben - 1), 1];
+                                    double KerndurchmesserVierkant = Normtabelle2[(eingegeben - 1), 2];
+                                    double SchlüsselweiteVierkant = Normtabelle2[(eingegeben - 1), 2];
+                                    double KopfhöheVierkant = Normtabelle2[(eingegeben - 1), 3];
+
+                                    NormVierkant(ausgewählt, KopfgrößeVierkant, KerndurchmesserVierkant, SchlüsselweiteVierkant, KopfhöheVierkant, diedichte, Längevierkant);
                                 }
                                 break;
 
@@ -289,11 +328,10 @@ namespace Schraubenhandel_GmbH
                         Gesamtdurchmesser gesamtdurchmesser = new Gesamtdurchmesser();
                         MetrischesGewinde Gewindedaten = new MetrischesGewinde();
 
-<<<<<<< HEAD
                         Console.WriteLine("Normteile: Schrauben werden eingeteilt nach ihrer Festigkeit: Bitte wählen Sie eine Festigkeitsklasse.");
-=======
+
                         Console.WriteLine("Normteile: Schrauben werden eingeteilt nach ihrer Festigkeit: Bitte wählen Sie eine der folgenden Festigkeitsklassen:");
->>>>>>> 6bd386148a6b0c417c30ea0cc4704076cd0bd9d6
+
                         Console.WriteLine("(1) 4,6\n(2) 5,6\n(3) 5,8\n(4) 6,8\n(5) 8,8\n(6) 10,9\n(7) 12,9");
 
                         int u = Convert.ToInt32(Console.ReadLine());
@@ -302,19 +340,16 @@ namespace Schraubenhandel_GmbH
                         double Zugfestigkeits = festigkeitsklasse[r, 1];
                         double Streckgrenze = festigkeitsklasse[r, 2];
 
-<<<<<<< HEAD
                         Console.WriteLine("Bitte geben Sie den Gewindedurchmesser in mm ein");
                         double gewindedurchmesser = Convert.ToDouble(Console.ReadLine());
 
-=======
                         Console.WriteLine("Bitte geben Sie die gewünschte Gewindegröße in mm ein:");
-                        double gewindedurchmesser = Convert.ToDouble(Console.ReadLine());
+                        double gewindedurchmessers = Convert.ToDouble(Console.ReadLine());
 
                         Console.WriteLine("Bitte geben Sie die gewünschte Schraubenlänge in mm ein:");
-                       // double normschraubenlaenge = Convert.ToDouble(Console.ReadLine()),
+                        // double normschraubenlaenge = Convert.ToDouble(Console.ReadLine()),
 
 
->>>>>>> 6bd386148a6b0c417c30ea0cc4704076cd0bd9d6
                         Console.WriteLine("Bitte Steigung angeben");
                         Gewindedaten.Steigung = Convert.ToDouble(Console.ReadLine());
 
@@ -324,16 +359,14 @@ namespace Schraubenhandel_GmbH
                         double Höööhe = Gewindedaten.GewindeHöhe();                                                  //Metrisches Gewinde nac ISO Norm 
                         gesamtdurchmesser.Gewindebreite = gewindedurchmesser + (2 * Höööhe);
 
-
-<<<<<<< HEAD
                         Console.WriteLine("Sie haben sich für " + anzahl + " Schrauben der Festigkeitsklasse " + festigkeitsklasse[r, 0] + " entschieden:");
-=======
+
                         Console.WriteLine("Sie haben sich für " + anzahl + " Schrauben der Festigkeitsklasse " + festigkeitsklasse[r, 0] + "entschieden:");
->>>>>>> 6bd386148a6b0c417c30ea0cc4704076cd0bd9d6
+
 
                         Console.WriteLine("Technische Daten:\nZugfestigkeit: " + Zugfestigkeits + "\nStreckgrenze: " + Streckgrenze + "\nGewinde: M " + gewindedurchmesser + "\nGesamtdurchmesser: " + gesamtdurchmesser.Gewindebreite);
-     }
-            
+                    }
+
                     break;
 
 
@@ -341,8 +374,8 @@ namespace Schraubenhandel_GmbH
 
                     Console.WriteLine("Ungültige Eingabe\n");
 
-                        goto Hauptmenü;
-                    
+                    goto Hauptmenü;
+
 
 
 
@@ -445,9 +478,9 @@ namespace Schraubenhandel_GmbH
         //METHODEN
 
 
-       
 
-        
+
+
         class Volumen1            //KLASSE Kopfvolumen 
         {                         //Volumen Kopf als Klasse deklariert, damit die Eigenschaft auch außerhalb des If Blocks weiterverwendet werden kann.
             public double Volumenx { get; set; }
@@ -576,32 +609,32 @@ namespace Schraubenhandel_GmbH
                 QuerschnittS = (Math.PI / 4) * (((Flankendurchmesser + KerndurchmesserAußengewinde) / 2) * ((Flankendurchmesser + KerndurchmesserAußengewinde) / 2));
                 return QuerschnittS;
             }
-       
+
             public double SchaftVolumen(double kerndurchmesser)  //METHODE: Berechnung des Volumens des Schraubenschafts
             {
-                
+
                 double schaftLänge;
-                
-                
+
+
 
                 Console.WriteLine("Länge angeben");
                 schaftLänge = Convert.ToDouble(Console.ReadLine());
-           
+
                 double radius = kerndurchmesser / 2;
 
                 ergebnisSchaft = schaftLänge * (radius * radius) * Math.PI;
 
                 return ergebnisSchaft;
-                
+
             }
-            
+
             class Trapezgewinde
             {
 
-  
-            }          
 
-     
+            }
+
+
 
         }
         class GewindeFrei : Gewinde                //Winkel frei bestimmbar
@@ -668,7 +701,7 @@ namespace Schraubenhandel_GmbH
 
             double volumenSchaftInSchraubenberechnung;  //Methodenaufruf Methode "Schaft" der Klasse MetrischesGewinde zur Volumenberechnung des Schafts
 
-           
+
             volumenSchaftInSchraubenberechnung = SchaftberechnungInSchraubenberechnung.SchaftVolumen(KernInnenDurchmesser);
 
             Console.WriteLine("Bitte wählen Sie einen der folgenden Werkstoff:\n(1) Baustahl S235JR nach DIN EN 10025-2\n(2) Vergütungsstahl 34CrNiMo6 nach DIN EN 10083-2\n(3) Messing CuZn37 nach DIN EN 12163\n(4) Aluminiumlegierung ENAW-AlSi1MgMn nach DIN EN 755-2");
@@ -689,7 +722,7 @@ namespace Schraubenhandel_GmbH
 
             double dichteEnd = dichte[y];
 
-            
+
 
 
             double masse;
@@ -707,8 +740,8 @@ namespace Schraubenhandel_GmbH
 
             masse = (gesamtvolumen / 1000) * dichteEnd;
             Werkstoffpreis = (masse / 1000) * preisEnd;
-     
-            if(zweiteAuswahl ==1)
+
+            if (zweiteAuswahl == 1)
             {
                 return masse;
             }
@@ -727,17 +760,51 @@ namespace Schraubenhandel_GmbH
             public double preis2 { get; set; }
         }
 
-       
+        //NORMMETHODEN
+        //1. Vierkant 
 
-        
+        static void NormVierkant(int welcheMethode, double Kopfgr, double Kerndurch, double SW, double Kopfh, double dichtee, double Längee)
+        {
+
+            if (welcheMethode == 1)
+            {
+                double MasseVierkant = dichtee * ((Kopfgr * Kopfh) + (Längee * Kerndurch));
+                Console.WriteLine("Die Masse ist" + MasseVierkant + " g");
+            }
+            if (welcheMethode == 2)
+            {
+                //PLATZHALTER
+            }
+        }
+
+        //2. Sechskant 
+
+        static void NormSechskant(int welcheMethode, double Kopfgr, double Kerndurch, double SW, double Kopfh, double dichtee, double Längee)
+        {
+            if (welcheMethode == 1)
+            {
+                double Dreieckhalb = SW / Math.Sqrt(3);
+                double Sechseck = Math.Sqrt(3) * (((3 * Dreieckhalb * Dreieckhalb)) / 2);
+                double MasseSechkant = dichtee * ((Sechseck * Kopfh) + (Längee * Kerndurch));
+                Console.WriteLine("Die Masse ist" + MasseSechkant + " g");
+            }
+            if (welcheMethode == 2)
+            {
+                //PLATZHALTER
+            }
 
 
 
 
 
 
+
+
+
+
+
+        }
 
     }
-
 }
 
