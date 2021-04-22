@@ -240,7 +240,9 @@ namespace Schraubenhandel_GmbH
                                         double SchlüsselweiteSechskant = Normtabelle[(eingegeben0 - 1), 2];
                                         double KopfhöheSechskant = Normtabelle[(eingegeben0 - 1), 3];
 
-                                        NormSechskant(ausgewählt0, KopfgrößeSechskant, KerndurchmesserSechskant, SchlüsselweiteSechskant, KopfhöheSechskant, diedichte, LängeSechskant);
+                                        double Mass = NormSechskant(ausgewählt0, KopfgrößeSechskant, KerndurchmesserSechskant, SchlüsselweiteSechskant, KopfhöheSechskant, diedichte, LängeSechskant);
+
+                                        Console.WriteLine("Einzelmasse:" + Mass + "\nGesamtmasse:" + Mass * anzzal);
                                     }
                                     break;
                                 case 2:            // Vierkantschraube mit Kernansatz DIN 479
@@ -272,7 +274,8 @@ namespace Schraubenhandel_GmbH
                                         double SchlüsselweiteVierkant = Normtabelle2[(eingegeben - 1), 2];
                                         double KopfhöheVierkant = Normtabelle2[(eingegeben - 1), 3];
 
-                                        NormVierkant(ausgewählt, KopfgrößeVierkant, KerndurchmesserVierkant, SchlüsselweiteVierkant, KopfhöheVierkant, diedichte, Längevierkant);
+                                        double Mass = NormVierkant(ausgewählt, KopfgrößeVierkant, KerndurchmesserVierkant, SchlüsselweiteVierkant, KopfhöheVierkant, diedichte, Längevierkant);
+                                        Console.WriteLine("Einzelmasse:" + Mass + "\nGesamtmasse:" + Mass * anzzal);
                                     }
                                     break;
 
@@ -308,7 +311,8 @@ namespace Schraubenhandel_GmbH
                                         double SchlüsselweiteInnensechkant = Normtabelle3[(eingegeben - 1), 2];
                                         double KopfhöheInnensechskant = Normtabelle3[(eingegeben - 1), 3];
 
-                                        NormInnensechskant(ausgewählt1, KopfgrößeInnensechskant, KerndurchmesserInnensechskant, SchlüsselweiteInnensechkant, KopfhöheInnensechskant, diedichte, LängeInnensechskannt);
+                                        double Mass = NormInnensechskant(ausgewählt1, KopfgrößeInnensechskant, KerndurchmesserInnensechskant, SchlüsselweiteInnensechkant, KopfhöheInnensechskant, diedichte, LängeInnensechskannt);
+                                        Console.WriteLine("Einzelmasse:" + Mass + "\nGesamtmasse:" + Mass * anzzal);
 
                                     }
                                     break;
@@ -753,39 +757,45 @@ namespace Schraubenhandel_GmbH
         //NORMMETHODEN
         //1. Vierkant 
 
-        static void NormVierkant(int welcheMethode, double Kopfgr, double Kerndurch, double SW, double Kopfh, double dichtee, double Längee)
+        static double NormVierkant(int welcheMethode, double Kopfgr, double Kerndurch, double SW, double Kopfh, double dichtee, double Längee)
         {
 
             if (welcheMethode == 1)
             {
                 double MasseVierkant = dichtee * (((Kopfgr * Kopfh) + (Längee * Kerndurch)) / 1000);
-                Console.WriteLine("Die Masse ist" + MasseVierkant + " g");
+                return MasseVierkant;
             }
             if (welcheMethode == 2)
             {
                 //PLATZHALTER
+                return 0;
             }
+            else
+                return 0;
         }
 
         //2. Sechskant 
 
-        static void NormSechskant(int welcheMethode, double Kopfgr, double Kerndurch, double SW, double Kopfh, double dichtee, double Längee)
+        static double NormSechskant(int welcheMethode, double Kopfgr, double Kerndurch, double SW, double Kopfh, double dichtee, double Längee)
         {
             if (welcheMethode == 1)
             {
                 double Dreieckhalb = SW / Math.Sqrt(3);
                 double Sechseck = Math.Sqrt(3) * (((3 * Dreieckhalb * Dreieckhalb)) / 2);
                 double MasseSechkant = dichtee * (((Sechseck * Kopfh) + (Längee * Kerndurch)) / 1000);
-                Console.WriteLine("Die Masse ist" + MasseSechkant + " g");
+                return MasseSechkant;
             }
             if (welcheMethode == 2)
             {
                 //PLATZHALTER
+                return 0; 
             }
+            else
+                return 0;
 
         }
 
-        static void NormInnensechskant(int welcheMethode, double Kopfgr, double Kerndurch, double SW, double Kopfh, double dichtee, double Längee)
+        static double NormInnensechskant(int welcheMethode, double Kopfgr, double Kerndurch, double SW, double Kopfh, double dichtee, double Längee)
         {
             if (welcheMethode == 1)
             {
@@ -797,14 +807,16 @@ namespace Schraubenhandel_GmbH
 
                 double MasseInnenSechskant = ((Volumenaussen - Volumeninnen) / 1000) * dichtee;
 
- 
 
-                Console.WriteLine("Die Masse ist" + MasseInnenSechskant + " g");
+
+                return MasseInnenSechskant;
             }
             if (welcheMethode == 2)
             {
                 //PLATZHALTER
+                return 0;
             }
+            else return 0;
 
         }
 
