@@ -301,6 +301,7 @@ namespace Schraubenhandel_GmbH
                                     double[,] Normtabelle4 = new double[9, 5];
 
                                     //Bezeichnung                     // Kopfgröße                  //Kerndurchmesser                //Schlüsselweite              //Kopftiefe
+        
                                     Normtabelle4[0, 0] = 4; Normtabelle4[0, 1] = 7.5; Normtabelle4[0, 2] = 3.40; Normtabelle4[0, 3] = 2.5; Normtabelle4[0, 4] = 1.9;
                                     Normtabelle4[1, 0] = 6; Normtabelle4[1, 1] = 11.3; Normtabelle4[1, 2] = 5.07; Normtabelle4[1, 3] = 4; Normtabelle4[1, 4] = 3.7;
                                     Normtabelle4[2, 0] = 8; Normtabelle4[2, 1] = 15.2; Normtabelle4[2, 2] = 6.82; Normtabelle4[2, 3] = 5; Normtabelle4[2, 4] = 5;
@@ -332,7 +333,6 @@ namespace Schraubenhandel_GmbH
                         Gesamtdurchmesser gesamtdurchmesser = new Gesamtdurchmesser();
                         MetrischesGewinde Gewindedaten = new MetrischesGewinde();
 
-                        Console.WriteLine("Normteile: Schrauben werden eingeteilt nach ihrer Festigkeit: Bitte wählen Sie eine Festigkeitsklasse.");
 
                         Console.WriteLine("Normteile: Schrauben werden eingeteilt nach ihrer Festigkeit: Bitte wählen Sie eine der folgenden Festigkeitsklassen:");
 
@@ -365,7 +365,6 @@ namespace Schraubenhandel_GmbH
 
                         Console.WriteLine("Sie haben sich für " + anzahl + " Schrauben der Festigkeitsklasse " + festigkeitsklasse[r, 0] + " entschieden:");
 
-                        Console.WriteLine("Sie haben sich für " + anzahl + " Schrauben der Festigkeitsklasse " + festigkeitsklasse[r, 0] + "entschieden:");
 
 
                         Console.WriteLine("Technische Daten:\nZugfestigkeit: " + Zugfestigkeits + "\nStreckgrenze: " + Streckgrenze + "\nGewinde: M " + gewindedurchmesser + "\nGesamtdurchmesser: " + gesamtdurchmesser.Gewindebreite);
