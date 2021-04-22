@@ -227,7 +227,7 @@ namespace Schraubenhandel_GmbH
 
                                         Console.WriteLine("Bitte Aktion auswählen:(1) Masse");
                                         int ausgewählt0 = Convert.ToInt32(Console.ReadLine());
-                                        Console.WriteLine("Bitte Gewindegröße angeben\n4\n6\n8\n10\n12\n16\n20\n24");
+                                        Console.WriteLine("Bitte Gewindegröße angeben\n(1) 4\n(2) 6\n(3) 8\n (4) 10\n(5) 12\n(6) 16\n(7) 20\n(8) 24");
                                         int eingegeben0 = Convert.ToInt32(Console.ReadLine());
                                         Console.WriteLine("Bitte Länge angeben");
                                         double LängeSechskant = Convert.ToDouble(Console.ReadLine());
@@ -256,7 +256,7 @@ namespace Schraubenhandel_GmbH
 
                                         Console.WriteLine("Bitte Aktion auswählen:(1) Masse");
                                         int ausgewählt = Convert.ToInt32(Console.ReadLine());
-                                        Console.WriteLine("Bitte Gewindegröße angeben\n4\n6\n8\n10\n12\n16\n20\n24");
+                                        Console.WriteLine("Bitte Gewindegröße angeben\n(1) 4\n(2) 6\n(3) 8\n(4) 10\n(5) 12\n(6) 16\n(7) 20\n(8) 24");
                                         int eingegeben = Convert.ToInt32(Console.ReadLine());
                                         Console.WriteLine("Bitte Länge angeben");
                                         double Längevierkant = Convert.ToDouble(Console.ReadLine());
@@ -289,7 +289,7 @@ namespace Schraubenhandel_GmbH
 
                                         Console.WriteLine("Bitte Aktion auswählen:(1) Masse");
                                         int ausgewählt1 = Convert.ToInt32(Console.ReadLine());
-                                        Console.WriteLine("Bitte Gewindegröße angeben\n4\n6\n8\n10\n12\n16\n20\n24");
+                                        Console.WriteLine("Bitte Gewindegröße angeben\n(1) 4\n(2) 6\n(3) 8\n(4) 10\n(5) 12\n(6) 16\n(7) 20\n(8) 24");
                                         int eingegeben = Convert.ToInt32(Console.ReadLine());
                                         Console.WriteLine("Bitte Länge angeben");
                                         double LängeInnensechskannt = Convert.ToDouble(Console.ReadLine());
