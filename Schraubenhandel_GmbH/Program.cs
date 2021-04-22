@@ -174,6 +174,10 @@ namespace Schraubenhandel_GmbH
                                 Console.WriteLine("Das Paket kommt nie an :(");
                             }
 
+                            Random Tracking = new Random();
+                            int number = Tracking.Next(100000, 99999);
+                            Console.WriteLine("Tracking Nummer:\n" + number);
+
 
 
 
