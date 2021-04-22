@@ -325,7 +325,12 @@ namespace Schraubenhandel_GmbH
                             }
                         while (Nachfrag.richtig == 2);
 
+                        Console.WriteLine("Bitte nennen Sie die gewünschte Anzahl;");
+                        int anzzal = Convert.ToInt32(Console.ReadLine());
+
                         Lieferdienst();
+
+                        Console.WriteLine("Vielen Dank");
 
                     }
 
