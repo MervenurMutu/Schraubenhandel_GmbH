@@ -786,7 +786,8 @@ namespace Schraubenhandel_GmbH
                 double Dreieckhalb = SW / Math.Sqrt(3);
                 double Volumeninnen = (Math.Sqrt(3) * (((3 * Dreieckhalb * Dreieckhalb)) / 2)) * (Kopfh / 2);
 
-                double MasseInnenSechskant = Volumenaussen - Volumeninnen;
+
+                double MasseInnenSechskant = ((Volumenaussen - Volumeninnen) / 1000) * dichtee;
 
  
 
