@@ -58,7 +58,7 @@ namespace Schraubenhandel_GmbH
 
                             if (zweitesAuswahl == 1)
                             {
-                                Console.WriteLine("Kerndurchmesser angeben");
+                                Console.WriteLine("Kerndurchmesser angeben (in mm)");
                                 double ii = Convert.ToDouble(Console.ReadLine());
                                 double MasseReady = MassenFunktion(ii, erstesAuswahl, zweitesAuswahl);
                                 Console.WriteLine("Die Masse beträgt " + MasseReady + " g");
@@ -66,7 +66,7 @@ namespace Schraubenhandel_GmbH
                             }
                             if (zweitesAuswahl == 2)
                             {
-                                Console.WriteLine("Kerndurchmesser angeben");
+                                Console.WriteLine("Kerndurchmesser angeben (in mm)");
                                 double ii = Convert.ToDouble(Console.ReadLine());
                                 double PreisReady = MassenFunktion(ii, erstesAuswahl, zweitesAuswahl);
                                 Console.WriteLine("Der Preis beträgt " + (PreisReady / 1000) + " $");
@@ -653,7 +653,7 @@ namespace Schraubenhandel_GmbH
 
         static double MassenFunktion(double KernInnenDurchmesser, int ersteAuswahl, int zweiteAuswahl)
         {
-            Console.WriteLine("\nBitte geben Sie die geforderten Daten in mm an.\nInfos zum SchraubenKopf\n(1) Vierkant\n(2) Sechskant\n(3) Innensechskannt");
+            Console.WriteLine("\nInfos zum SchraubenKopf\n(1) Vierkant\n(2) Sechskant\n(3) Innensechskannt");
 
             int eingabe = Convert.ToInt32(Console.ReadLine());
             Volumen1 Kopf = new Volumen1();
