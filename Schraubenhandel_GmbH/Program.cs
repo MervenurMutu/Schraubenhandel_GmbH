@@ -174,10 +174,7 @@ namespace Schraubenhandel_GmbH
                                 Console.WriteLine("Das Paket kommt nie an :(");
                             }
 
-                            Random Tracking = new Random();
-                            int number = Tracking.Next(100000, 99999);
-                            Console.WriteLine("Tracking Nummer:\n" + number);
-
+                            
 
 
 
@@ -712,11 +709,11 @@ namespace Schraubenhandel_GmbH
 
             double gesamtvolumen = volumenSchaftInSchraubenberechnung + Kopf.Volumenx;
 
-            double[] dichte = new double[8];  //Dichten in g/cm^3
-            dichte[0] = 7.85;     //Baustahl S235JR
-            dichte[1] = 8;    //Vergütungsstahl 34CrNiMo6
-            dichte[2] = 8.44;     //Messing CuZn37
-            dichte[3] = 2.7;     //Aluminiuimlegierung ENAW-AlSi1MgMn
+            List<double> dichte = new List<double>();  //Dichten in g/cm^3
+            dichte.Add(7.85);     //Baustahl S235JR
+            dichte.Add(8);    //Vergütungsstahl 34CrNiMo6
+            dichte.Add(8.44);     //Messing CuZn37
+            dichte.Add(2.7);     //Aluminiuimlegierung ENAW-AlSi1MgMn
 
 
             xi = Convert.ToInt32(Console.ReadLine());
@@ -731,11 +728,11 @@ namespace Schraubenhandel_GmbH
             double masse;
             masse = gesamtvolumen * dichteEnd;
 
-            double[] Preis = new double[8];  //Preise in $/kg
-            Preis[0] = 3.63;   //Baustahl S235JR
-            Preis[1] = 10.28;    //Vergütungsstahl 34CrNiMo6
-            Preis[2] = 7.13;   //Messing CuZn37
-            Preis[3] = 9.89;   //Aluminiumlegierung ENAW-AlSi1MgMn
+            List<double> Preis = new List<double>();  //Preise in $/kg
+            Preis.Add(3.63);   //Baustahl S235JR
+            Preis.Add(10.28);    //Vergütungsstahl 34CrNiMo6
+            Preis.Add(7.13);   //Messing CuZn37
+            Preis.Add(9.89);   //Aluminiumlegierung ENAW-AlSi1MgMn
 
             double preisEnd = Preis[y];
 
