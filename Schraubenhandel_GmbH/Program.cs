@@ -30,7 +30,6 @@ namespace Schraubenhandel_GmbH
             festigkeitsklasse[5, 0] = 10.9; festigkeitsklasse[5, 1] = 1000; festigkeitsklasse[5, 2] = 900;
             festigkeitsklasse[6, 0] = 12.9; festigkeitsklasse[6, 1] = 1200; festigkeitsklasse[6, 2] = 10.9;
 
-
             switch (anfang)
             {
 
